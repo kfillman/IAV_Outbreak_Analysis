@@ -1,0 +1,143 @@
+---
+title: "Outbreak_Analysis"
+author: "Kathryn Fillman"
+format: html
+editor: visual
+---
+
+# IAV Outbreak Analysis
+
+## Command Hints:
+
+Add new chunk: *Ctrl+Alt+I*\
+Render document: *Shift+Ctrl+k*\
+run chunk: *Ctrl+shift+enter*\
+*If you want something on a newline, make sure to put 2 spaces after it*
+
+## Import data & libraries
+
+```{r Data & Library Import, inlcude=FALSE}
+library(readxl)
+library(dplyr)
+library(lubridate)
+
+banding <- read.csv("Outbreak_data/Banding_recov_.csv")
+FIPS_codes <- read.csv("Outbreak_data/FIPS_Region_Codes.csv")
+world_outbreak_data <- read_excel("Outbreak_data/Outbreak_H5_H5N1_2020_Sept2023_World.xlsx", sheet = "outbreaks")
+```
+
+## Data Cleaning
+
+```{r}
+world_outbreak_data <- world_outbreak_data %>% select(iso_code, country, region, Outbreak_start_date, Outbreak_end_date, Epi_unit, sero_sub_genotype_eng, level3_name, level2_name, level1_name, country_unique_code)
+world_outbreak_data$Outbreak_start_date <- as_date(world_outbreak_data$Outbreak_start_date)
+world_outbreak_data$Outbreak_end_date <- as_date(world_outbreak_data$Outbreak_end_date)
+world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_start_date, world_outbreak_data$Outbreak_end_date)
+```
+
+## Create List of First US Cases
+
+```{r}
+First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(Outbreak_start_date, Outbreak_end_date, outbreak_dates, level3_name, level2_name, level1_name, country_unique_code) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
+```
+
+## Create list of connections to/within the US
+
+```{r}
+US_connections <- banding %>% filter_all(any_vars(. %in% 'US')) %>% filter(!(FIPS_ADMIN_banding==FIPS_ADMIN_Recov)) %>% select(FIPS_ADMIN_banding, FIPS_ADMIN_Recov)
+US_connections <- right_join(FIPS_codes, US_connections, by=c( 'FIPS.Region.Code'='FIPS_ADMIN_banding'))
+US_connections <- right_join(FIPS_codes, US_connections, by=c( 'FIPS.Region.Code'='FIPS_ADMIN_Recov'))
+```
+
+## Find Connections to First State
+
+Create list of connections between state & Worldwide Locations
+
+```{r}
+state_banding <- US_connections %>% filter(State_Province.x=='South Carolina' | State_Province.y=='South Carolina')
+```
+
+Create list of outbreaks within potential time period
+
+date_prior_infection is first day of state infection - incubation period of infectious animal
+
+```{r}
+Date_prior_infection <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_name== 'South Carolina', 2])-3)
+Potential_Source <- world_outbreak_data %>% filter( Outbreak_start_date > (Date_prior_infection-30) & Outbreak_start_date < Date_prior_infection-3)
+```
+
+Match timely outbreaks with known state connections
+
+```{r}
+Potential_Source <- Potential_Source %>% filter( iso_code %in% state_banding$ISO.3166.1.alpha.3.x | iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
+Potential_Source$state <- 'South Carolina'
+Potential_Source$state_first_infection <- Date_prior_infection
+```
+
+## Create list of connections
+
+```{r}
+IAV_Sources <- data.frame(state= 'South Carolina',
+                          Source=Potential_Source %>% count(country))
+all_events <- Potential_Source %>%
+  select(state, state_first_infection, iso_code, country,
+         region, sero_sub_genotype_eng, Outbreak_start_date, level3_name, 
+         level2_name, level1_name)
+```
+
+## Create connection-finding function
+
+```{r}
+state_connections <- function(state) {
+  state_banding <- US_connections %>% filter(
+    State_Province.x==state | State_Province.y==state)
+  Date_prior_infection <- as_date(as.numeric(
+    First_US_Cases[First_US_Cases$level1_name==state, 2]))
+  Potential_Source <- world_outbreak_data %>% filter(
+    Outbreak_start_date > (Date_prior_infection-30) &
+      Outbreak_start_date < Date_prior_infection-3)
+  Potential_Source <- Potential_Source %>% filter(
+    iso_code %in% state_banding$ISO.3166.1.alpha.3.x |
+      iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
+  Sources <- data.frame(state= state, Source=Potential_Source %>%
+                          count(country))
+  Potential_Source$state <- state
+  Potential_Source$state_first_infection <- Date_prior_infection
+  IAV_Sources <<- rbind(IAV_Sources, Sources)
+  all_events <<- rbind(all_events, Potential_Source %>%
+                         select(state, state_first_infection, iso_code, country,
+                                region, sero_sub_genotype_eng, 
+                                Outbreak_start_date, level3_name, level2_name,
+                                level1_name))
+}
+```
+
+## Create List of Potential Sources for Each State
+
+```{r}
+for (level1_name in tail(First_US_Cases$level1_name, -1)) {
+  state_connections(level1_name)
+}
+```
+
+rename columns
+
+```{r}
+colnames(IAV_Sources) <- c('State', 'Source Country',
+                           'Occurances in Source Country')
+```
+
+Add dates to IAV_Sources
+
+```{r}
+first_cases <- First_US_Cases %>% select(level1_name, Outbreak_start_date)
+IAV_Sources <- left_join(IAV_Sources, first_cases, by =
+                           c('State' = 'level1_name'))
+```
+
+## Export
+
+```{r}
+write.csv(IAV_Sources,"First_US_IAV_Outbreak_Overview.csv", row.names = FALSE)
+write.csv(all_events,"First_US_IAV_Outbreak_Sources.csv", row.names = FALSE)
+```
