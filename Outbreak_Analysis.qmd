@@ -63,7 +63,7 @@ date_prior_infection is first day of state infection - incubation period of infe
 
 ```{r}
 Date_prior_infection <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_name== 'South Carolina', 2])-3)
-Potential_Source <- world_outbreak_data %>% filter( Outbreak_start_date > (Date_prior_infection-30) & Outbreak_start_date < Date_prior_infection-3)
+Potential_Source <- world_outbreak_data %>% filter(Date_prior_infection %within% outbreak_dates & Outbreak_start_date < Date_prior_infection)
 ```
 
 Match timely outbreaks with known state connections
@@ -71,7 +71,7 @@ Match timely outbreaks with known state connections
 ```{r}
 Potential_Source <- Potential_Source %>% filter( iso_code %in% state_banding$ISO.3166.1.alpha.3.x | iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
 Potential_Source$state <- 'South Carolina'
-Potential_Source$state_first_infection <- Date_prior_infection
+Potential_Source$state_first_infection <- Date_prior_infection+3
 ```
 
 ## Create list of connections
@@ -92,17 +92,15 @@ state_connections <- function(state) {
   state_banding <- US_connections %>% filter(
     State_Province.x==state | State_Province.y==state)
   Date_prior_infection <- as_date(as.numeric(
-    First_US_Cases[First_US_Cases$level1_name==state, 2]))
-  Potential_Source <- world_outbreak_data %>% filter(
-    Outbreak_start_date > (Date_prior_infection-30) &
-      Outbreak_start_date < Date_prior_infection-3)
+    First_US_Cases[First_US_Cases$level1_name==state, 2])-3)
+  Potential_Source <- world_outbreak_data %>% filter(Date_prior_infection %within% outbreak_dates & Outbreak_start_date < Date_prior_infection)
   Potential_Source <- Potential_Source %>% filter(
     iso_code %in% state_banding$ISO.3166.1.alpha.3.x |
       iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
   Sources <- data.frame(state= state, Source=Potential_Source %>%
                           count(country))
   Potential_Source$state <- state
-  Potential_Source$state_first_infection <- Date_prior_infection
+  Potential_Source$state_first_infection <- Date_prior_infection+3
   IAV_Sources <<- rbind(IAV_Sources, Sources)
   all_events <<- rbind(all_events, Potential_Source %>%
                          select(state, state_first_infection, iso_code, country,
