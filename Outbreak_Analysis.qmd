@@ -16,7 +16,7 @@ run chunk: *Ctrl+shift+enter*\
 
 ## Import data & libraries
 
-```{r Data & Library Import, inlcude=FALSE}
+```{r Data & Library Import, inlcude = FALSE}
 library(readxl)
 library(dplyr)
 library(lubridate)
@@ -28,7 +28,7 @@ world_outbreak_data <- read_excel("Outbreak_data/Outbreak_H5_H5N1_2020_Sept2023_
 
 ## Data Cleaning
 
-```{r}
+```{r Cleaning World Outbreak data}
 world_outbreak_data <- world_outbreak_data %>% select(iso_code, country, region, Outbreak_start_date, Outbreak_end_date, Epi_unit, sero_sub_genotype_eng, level3_name, level2_name, level1_name, country_unique_code)
 world_outbreak_data$Outbreak_start_date <- as_date(world_outbreak_data$Outbreak_start_date)
 world_outbreak_data$Outbreak_end_date <- as_date(world_outbreak_data$Outbreak_end_date)
@@ -37,8 +37,8 @@ world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_star
 
 ## Create List of First US Cases
 
-```{r}
-First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(Outbreak_start_date, Outbreak_end_date, outbreak_dates, level3_name, level2_name, level1_name, country_unique_code) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
+```{r Create list of first US cases}
+First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(Outbreak_start_date, Outbreak_end_date, outbreak_dates, level2_name, level1_name, country_unique_code) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
 ```
 
 ## Create list of connections to/within the US
