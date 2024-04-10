@@ -59,7 +59,7 @@ state_banding <- US_connections %>% filter(State_Province.x=='South Carolina' | 
 
 Create list of outbreaks within potential time period
 
-date_prior_infection is first day of state infection - incubation period of infectious animal
+date_prior_infection is first day of state infection - minimum incubation period of infectious animal
 
 ```{r}
 Date_prior_infection <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_name== 'South Carolina', 2])-3)
