@@ -77,8 +77,6 @@ Potential_Source$state_first_infection <- Date_prior_infection+3
 ## Create list of connections
 
 ```{r}
-IAV_Sources <- data.frame(state= 'South Carolina',
-                          Source=Potential_Source %>% count(country))
 all_events <- Potential_Source %>%
   select(state, state_first_infection, iso_code, country,
          region, sero_sub_genotype_eng, level3_name, 
@@ -102,7 +100,6 @@ state_connections <- function(state) {
   Potential_Source$state <- state
   Potential_Source$state_first_infection <- as_date(as.numeric(
     First_US_Cases[First_US_Cases$level1_name==state, 1]))
-  IAV_Sources <<- rbind(IAV_Sources, Sources)
   all_events <<- rbind(all_events, Potential_Source %>%
                          select(state, state_first_infection, iso_code, country,
                                 region, sero_sub_genotype_eng, level3_name,
@@ -118,24 +115,15 @@ for (level1_name in tail(First_US_Cases$level1_name, -1)) {
 }
 ```
 
-### rename columns
-
+## Create summary of introduction locations
 ```{r}
-colnames(IAV_Sources) <- c('State', 'Source Country',
-                           'Occurrences in Source Country')
+source_summary <- all_events %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name) %>% count %>% arrange(state_first_infection)
 ```
 
-### Add dates to IAV_Sources
-
-```{r}
-first_cases <- First_US_Cases %>% select(level1_name, Outbreak_start_date)
-IAV_Sources <- left_join(IAV_Sources, first_cases, by =
-                           c('State' = 'level1_name'))
-```
 
 ## Export
 
 ```{r}
-write.csv(IAV_Sources,"First_US_IAV_Outbreak_Overview.csv", row.names = FALSE)
+write.csv(source_summary,"First_US_IAV_Outbreak_Overview.csv", row.names = FALSE)
 write.csv(all_events,"First_US_IAV_Outbreak_Sources.csv", row.names = FALSE)
 ```
