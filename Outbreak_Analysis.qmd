@@ -115,7 +115,7 @@ canidate_sources <- canidate_sources %>%
 ## Create summary of canidate source locations
 
 ```{r}
-source_summary <- canidate_sources %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name) %>% count %>% arrange(state_first_infection)
+source_summary <- canidate_sources %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name, country) %>% count %>% arrange(state_first_infection)
 ```
 
 ## Export
