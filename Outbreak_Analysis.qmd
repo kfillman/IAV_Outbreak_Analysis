@@ -5,7 +5,7 @@ format: html
 editor: visual
 ---
 
-# IAV Outbreak Analysis
+# HPAI Outbreak Analysis
 
 ## Command Hints:
 
@@ -29,13 +29,12 @@ world_outbreak_data <- read_excel("Outbreak_data/Outbreak_H5_H5N1_2020_Sept2023_
 ## Data Cleaning
 
 ```{r Cleaning World Outbreak data}
-world_outbreak_data <- world_outbreak_data %>% select(iso_code, country, region, Outbreak_start_date, Outbreak_end_date, Epi_unit, sero_sub_genotype_eng, level3_name, level2_name, level1_name, country_unique_code)
 world_outbreak_data$Outbreak_start_date <- as_date(world_outbreak_data$Outbreak_start_date)
 world_outbreak_data$Outbreak_end_date <- as_date(world_outbreak_data$Outbreak_end_date)
 world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_start_date, world_outbreak_data$Outbreak_end_date)
 ```
 
-## Create List of First US Cases
+## Create List of First US Casess
 
 ```{r Create list of first US cases}
 First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(Outbreak_start_date, outbreak_dates, level2_name, level1_name, country_unique_code) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
@@ -54,56 +53,41 @@ US_connections <- right_join(FIPS_codes, US_connections, by=c( 'FIPS.Region.Code
 ### Create list of connections between state & worldwide locations
 
 ```{r}
-state_banding <- US_connections %>% filter(State_Province.x=='South Carolina' | State_Province.y=='South Carolina')
+state_connections <- US_connections %>% filter(State_Province.x=='South Carolina' | State_Province.y=='South Carolina')
 ```
 
 ### Create list of outbreaks within potential time period
 
-date_prior_infection is first day of state infection - minimum incubation period of infectious animal
+infectious_date is first day of state infection - minimum time before symptoms arise
 
 ```{r}
-Date_prior_infection <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_name== 'South Carolina', 1])-3)
-Potential_Source <- world_outbreak_data %>% filter((Date_prior_infection %within% outbreak_dates) & (Outbreak_start_date < Date_prior_infection))
+infectious_date <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_name== 'South Carolina', 1])-3)
+canidate_sources <- world_outbreak_data %>% filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date))
 ```
 
 ### Match timely outbreaks with known state connections
 
 ```{r}
-Potential_Source <- Potential_Source %>% filter( iso_code %in% state_banding$ISO.3166.1.alpha.3.x | iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
-Potential_Source$state <- 'South Carolina'
-Potential_Source$state_first_infection <- Date_prior_infection+3
-```
-
-## Create list of connections
-
-```{r}
-all_events <- Potential_Source %>%
-  select(state, state_first_infection, iso_code, country,
-         region, sero_sub_genotype_eng, level3_name, 
-         level2_name, level1_name)
+canidate_sources <- canidate_sources %>% filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
+canidate_sources$state <- 'South Carolina'
+canidate_sources$state_first_infection <- infectious_date+3
 ```
 
 ## Create connection-finding function
-
 ```{r}
-state_connections <- function(state) {
-  state_banding <- US_connections %>% filter(
+connection_finder <- function(state) {
+  state_connections <- US_connections %>% filter(
     State_Province.x==state | State_Province.y==state)
-  Date_prior_infection <- as_date(as.numeric(
+  infectious_date <- as_date(as.numeric(
     First_US_Cases[First_US_Cases$level1_name==state, 1])-3)
-  Potential_Source <- world_outbreak_data %>% filter((Date_prior_infection %within% outbreak_dates) & (Outbreak_start_date < Date_prior_infection))
-  Potential_Source <- Potential_Source %>% filter(
-    iso_code %in% state_banding$ISO.3166.1.alpha.3.x |
-      iso_code %in% state_banding$ISO.3166.1.alpha.3.y)
-  Sources <- data.frame(state= state, Source=Potential_Source %>%
-                          count(country))
-  Potential_Source$state <- state
-  Potential_Source$state_first_infection <- as_date(as.numeric(
+  canidate_sources <- world_outbreak_data %>% filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date))
+  canidate_sources <- canidate_sources %>% filter(
+    iso_code %in% state_connections$ISO.3166.1.alpha.3.x |
+      iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
+  canidate_sources$state <- state
+  canidate_sources$state_first_infection <- as_date(as.numeric(
     First_US_Cases[First_US_Cases$level1_name==state, 1]))
-  all_events <<- rbind(all_events, Potential_Source %>%
-                         select(state, state_first_infection, iso_code, country,
-                                region, sero_sub_genotype_eng, level3_name,
-                                level2_name, level1_name))
+  canidate_sources <<- rbind(canidate_sources, canidate_sources)
 }
 ```
 
@@ -111,19 +95,28 @@ state_connections <- function(state) {
 
 ```{r}
 for (level1_name in tail(First_US_Cases$level1_name, -1)) {
-  state_connections(level1_name)
+  connection_finder(level1_name)
 }
 ```
 
-## Create summary of introduction locations
+## Decrease variables in list of connections
+
 ```{r}
-source_summary <- all_events %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name) %>% count %>% arrange(state_first_infection)
+canidate_sources <- canidate_sources %>%
+  select(state, state_first_infection, iso_code, country,
+         region, sero_sub_genotype_eng, disease_eng, Outbreak_id, level3_name, 
+         level2_name, level1_name)
 ```
 
+## Create summary of introduction locations
+
+```{r}
+source_summary <- canidate_sources %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name) %>% count %>% arrange(state_first_infection)
+```
 
 ## Export
 
 ```{r}
 write.csv(source_summary,"First_US_IAV_Outbreak_Overview.csv", row.names = FALSE)
-write.csv(all_events,"First_US_IAV_Outbreak_Sources.csv", row.names = FALSE)
+write.csv(canidate_sources,"First_US_IAV_Outbreak_Sources.csv", row.names = FALSE)
 ```
