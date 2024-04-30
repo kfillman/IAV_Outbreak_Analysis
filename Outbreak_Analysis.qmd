@@ -17,9 +17,10 @@ run chunk: *Ctrl+shift+enter*\
 ## Import data & libraries
 
 ```{r Data & Library Import, inlcude = FALSE}
-library(readxl)
+library(tidyverse)
 library(dplyr)
 library(lubridate)
+library(readxl)
 
 banding <- read.csv("Outbreak_data/Banding_recov_.csv")
 FIPS_codes <- read.csv("Outbreak_data/FIPS_Region_Codes.csv")
@@ -56,7 +57,7 @@ US_connections <- right_join(FIPS_codes, US_connections, by=c( 'FIPS.Region.Code
 state_connections <- US_connections %>% filter(State_Province.x=='South Carolina' | State_Province.y=='South Carolina')
 ```
 
-### Create list of canidate sources
+### Create list of candidate sources
 
 infectious_date is first day of state infection - minimum time before symptoms arise
 
@@ -65,18 +66,18 @@ infectious_date <- as_date(as.numeric (First_US_Cases [First_US_Cases$level1_nam
 ```
 
 Filter outbreak data to include only locations with timely outbreaks
-Then filter again to inlcude only locations that have connections to that state
+Then filter again to include only locations that have connections to that state
 
 ```{r}
-canidate_sources <- world_outbreak_data %>%
+candidate_sources <- world_outbreak_data %>%
   filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>%
   filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
 ```
 
-Add coloums to identify the state for each source & that state's first outbreak
+Add columns to identify the state for each source & that state's first outbreak
 ```{r}
-canidate_sources$state <- 'South Carolina'
-canidate_sources$state_first_infection <- infectious_date+3
+candidate_sources$state <- 'South Carolina'
+candidate_sources$state_first_infection <- infectious_date+3
 ```
 
 
@@ -92,7 +93,7 @@ connection_finder <- function(state) {
   filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
   state_sources$state <- state
   state_sources$state_first_infection <- infectious_date+3
-  canidate_sources <<- rbind(canidate_sources, state_sources)
+  candidate_sources <<- rbind(candidate_sources, state_sources)
 }
 ```
 
@@ -106,21 +107,38 @@ for (level1_name in tail(First_US_Cases$level1_name, -1)) {
 
 Select subset of meaningful variables
 ```{r}
-canidate_sources <- canidate_sources %>%
+candidate_sources <- candidate_sources %>%
   select(state, state_first_infection, iso_code, country,
-         region, sero_sub_genotype_eng, disease_eng, Outbreak_id, level3_name, 
-         level2_name, level1_name)
+         region, sero_sub_genotype_eng, disease_eng, Outbreak_id, level3_name, level2_name, level1_name)
 ```
 
-## Create summary of canidate source locations
+## Create summary of candidate source locations
 
 ```{r}
-source_summary <- canidate_sources %>% group_by(state, state_first_infection, level3_name, level2_name, level1_name, country) %>% count %>% arrange(state_first_infection)
+source_summary <- candidate_sources %>% group_by(state, state_first_infection, country, level1_name, level2_name, level3_name) %>% count %>% arrange(state_first_infection)
 ```
 
-## Export
+Print counts of candidate sources per country
+```{r}
+candidate_sources %>% group_by(country) %>% count() %>% arrange(desc(n))
+```
+Do the same for level1_names (not inlcuding US)
+```{r}
+candidate_sources %>% filter(country != 'United States of America') %>% group_by(level1_name) %>% count() %>% arrange(desc(n))
+```
+
+## Export Data
+
+Rename columns
+```{r}
+colnames(First_US_Cases) <- c('Outbreak Start Date', 'Outbreak Date Range', 'County', 'State', 'Country')
+```
+
+
+### Write to documents
 
 ```{r}
 write.csv(source_summary,"IAV_Source_Summary.csv", row.names = FALSE)
-write.csv(canidate_sources,"Canidate_Source_List.csv", row.names = FALSE)
+write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
+write.csv(First_US_Cases %>% select('State', 'County', 'Outbreak Start Date'),"US_First_Outbreaks.csv", row.names = FALSE)
 ```
