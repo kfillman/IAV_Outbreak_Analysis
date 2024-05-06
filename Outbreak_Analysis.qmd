@@ -140,5 +140,5 @@ colnames(First_US_Cases) <- c('Outbreak Start Date', 'Outbreak Date Range', 'Cou
 ```{r}
 write.csv(source_summary,"IAV_Source_Summary.csv", row.names = FALSE)
 write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
-write.csv(First_US_Cases %>% select('State', 'County', 'Outbreak Start Date'),"US_First_Outbreaks.csv", row.names = FALSE)
+write.csv(First_US_Cases,"US_First_Outbreaks.csv", row.names = FALSE)
 ```
