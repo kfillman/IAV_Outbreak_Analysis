@@ -38,7 +38,7 @@ world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_star
 ## Create List of First US Casess
 
 ```{r Create list of first US cases}
-First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(country_unique_code, level1_name, level2_name, Outbreak_start_date, outbreak_dates, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
+First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(country_unique_code, level1_name, level2_name, Latitude, Longitude, Outbreak_start_date, outbreak_dates, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
 ```
 
 ## Create list of connections to/within the US
@@ -108,7 +108,7 @@ Select subset of meaningful variables
 
 ```{r}
 candidate_sources <- candidate_sources %>%
-  select(state, state_first_infection, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Outbreak_start_date, level3_name, level2_name, level1_name)
+  select(state, state_first_infection, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
 ```
 
 ## Create summary of candidate source locations
