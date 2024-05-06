@@ -74,22 +74,23 @@ candidate_sources <- world_outbreak_data %>%
 Add columns to identify the state for each source & that state's first outbreak
 
 ```{r}
-candidate_sources$state <- 'South Carolina'
-candidate_sources$state_first_infection <- infectious_date+3
+state_lat <- First_US_Cases %>% filter(level1_name=='South Carolina') %>% select(Latitude) %>% as.numeric()
+state_long <- First_US_Cases %>% filter(level1_name=='South Carolina') %>% select(Longitude) %>% as.numeric()
+candidate_sources <- candidate_sources %>% mutate(state='South Carolina', state_first_infection=(infectious_date+3), state_lat=state_lat, state_long=state_long)
 ```
 
 ## Create connection-finding function
 
 ```{r}
 connection_finder <- function(state) {
-  state_connections <- US_connections %>% filter(
-    State_Province.x==state | State_Province.y==state)
-  infectious_date <- as_date(as.numeric(
-    First_US_Cases[First_US_Cases$level1_name==state, "Outbreak_start_date"])-3)
+  state_connections <- US_connections %>% filter(State_Province.x==state | State_Province.y==state)
+  infectious_date <- as_date(as.numeric(First_US_Cases[First_US_Cases$level1_name==state, "Outbreak_start_date"])-3)
   state_sources <- world_outbreak_data %>%
-  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>% filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
-  state_sources$state <- state
-  state_sources$state_first_infection <- infectious_date+3
+  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>%
+    filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
+  state_lat <- First_US_Cases %>% filter(level1_name==state) %>% select(Latitude) %>% as.numeric()
+  state_long <- First_US_Cases %>% filter(level1_name==state) %>% select(Longitude) %>% as.numeric()
+  state_sources <- state_sources %>% mutate(state=state, state_first_infection=(infectious_date+3), state_lat=state_lat, state_long=state_long)
   candidate_sources <<- rbind(candidate_sources, state_sources)
 }
 ```
@@ -108,7 +109,7 @@ Select subset of meaningful variables
 
 ```{r}
 candidate_sources <- candidate_sources %>%
-  select(state, state_first_infection, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
+  select(state, state_first_infection, state_lat, state_long, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
 ```
 
 ## Create summary of candidate source locations
