@@ -109,7 +109,7 @@ Select subset of meaningful variables
 ```{r}
 candidate_sources <- candidate_sources %>%
   select(state, state_first_infection, iso_code, country,
-         region, sero_sub_genotype_eng, disease_eng, Outbreak_id, level3_name, level2_name, level1_name)
+         region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Outbreak_id, level3_name, level2_name, level1_name, susceptible,	cases,	dead,	killed_disposed,	slaughtered,	vaccinated,	morbidity,	mortality)
 ```
 
 ## Create summary of candidate source locations
@@ -122,7 +122,7 @@ Print counts of candidate sources per country
 ```{r}
 candidate_sources %>% group_by(country) %>% count() %>% arrange(desc(n))
 ```
-Do the same for level1_names (not inlcuding US)
+Do the same for level1_names (not including US)
 ```{r}
 candidate_sources %>% filter(country != 'United States of America') %>% group_by(level1_name) %>% count() %>% arrange(desc(n))
 ```
