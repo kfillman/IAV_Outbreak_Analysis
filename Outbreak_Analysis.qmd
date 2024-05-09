@@ -7,13 +7,6 @@ editor: visual
 
 # HPAI Outbreak Analysis
 
-## Command Hints:
-
-Add new chunk: *Ctrl+Alt+I*\
-Render document: *Shift+Ctrl+k*\
-run chunk: *Ctrl+shift+enter*\
-*If you want something on a newline, make sure to put 2 spaces after it*
-
 ## Import data & libraries
 
 ```{r Data & Library Import, echo = FALSE}
