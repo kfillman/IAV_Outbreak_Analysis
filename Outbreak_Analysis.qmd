@@ -131,6 +131,26 @@ n_distinct(outside_US_sources$level1_name)
 tail(sort(table(outside_US_sources$level1_name)))
 ```
 
+## Time between event and infection
+Average time between state first infection and potential source (per state)
+```{r}
+candidate_sources %>% group_by(state) %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date))
+```
+
+Overall
+```{r}
+candidate_sources %>%  summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+For outside US only- not much difference
+```{r}
+outside_US_sources %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Excluding Americas - way longer average
+```{r}
+candidate_sources %>% filter(region!='Americas') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+
+
 ## Export Data
 
 ### Write to documents
