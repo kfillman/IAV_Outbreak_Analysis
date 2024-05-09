@@ -67,7 +67,7 @@ Filter outbreak data to include only locations with timely outbreaks Then filter
 
 ```{r}
 candidate_sources <- world_outbreak_data %>%
-  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>%
+  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date) %>%
   filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
 ```
 
@@ -118,13 +118,13 @@ candidate_sources <- candidate_sources %>%
 outside_US_sources <- candidate_sources %>% filter(country!='United States of America')
 ```
 
-Number of potential source countries (other than US) and how many potential source events they had
+Number of potential source countries and how many potential source events they had
 ```{r}
 n_distinct(outside_US_sources$country)
 sort(table(outside_US_sources$country))
 ```
 
-Do the same for level1_names (not including US)
+Do the same for level1_names
 
 ```{r}
 n_distinct(outside_US_sources$level1_name)
