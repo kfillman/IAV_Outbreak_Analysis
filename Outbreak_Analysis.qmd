@@ -67,7 +67,7 @@ Filter outbreak data to include only locations with timely outbreaks Then filter
 
 ```{r}
 candidate_sources <- world_outbreak_data %>%
-  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date) %>%
+  filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>%
   filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
 ```
 
@@ -154,6 +154,12 @@ Just Canada
 candidate_sources %>% filter(country=='Canada') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 
+### Source Summary Table
+```{r}
+source_summary <- candidate_sources %>% group_by(state, state_first_infection, country, level1_name) %>% count(level1_name)
+```
+
+
 ## Export Data
 
 ### Write to documents
@@ -161,4 +167,5 @@ candidate_sources %>% filter(country=='Canada') %>% summarise(time_to_infection=
 ```{r}
 write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
 write.csv(First_US_Cases,"US_First_Outbreaks.csv", row.names = FALSE)
+write.csv(source_summary, "Source_Summary.csv", row.names = FALSE)
 ```
