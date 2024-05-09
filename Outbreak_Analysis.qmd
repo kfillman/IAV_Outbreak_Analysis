@@ -115,20 +115,20 @@ candidate_sources <- candidate_sources %>%
 ## Create subset of candidate source locations not inlcuing US
 
 ```{r}
-outside_US_sources <- canidate_sources %>% filter(country!='United States of America')
+outside_US_sources <- candidate_sources %>% filter(country!='United States of America')
 ```
 
 Number of potential source countries (other than US) and how many potential source events they had
 ```{r}
 n_distinct(outside_US_sources$country)
-table(outside_US_sources$country)
+sort(table(outside_US_sources$country))
 ```
 
 Do the same for level1_names (not including US)
 
 ```{r}
 n_distinct(outside_US_sources$level1_name)
-table(outside_US_sources$level1_name)
+tail(sort(table(outside_US_sources$level1_name)))
 ```
 
 ## Export Data
