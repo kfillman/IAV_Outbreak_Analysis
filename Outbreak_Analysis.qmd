@@ -112,22 +112,23 @@ candidate_sources <- candidate_sources %>%
   select(state, state_first_infection, state_lat, state_long, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
 ```
 
-## Create summary of candidate source locations
+## Create subset of candidate source locations not inlcuing US
 
 ```{r}
-source_summary <- candidate_sources %>% group_by(state, state_first_infection, country, level1_name, level2_name) %>% count %>% arrange(state_first_infection)
+outside_US_sources <- canidate_sources %>% filter(country!='United States of America')
 ```
 
-Print counts of candidate sources per country
-
+Number of potential source countries (other than US) and how many potential source events they had
 ```{r}
-candidate_sources %>% group_by(country) %>% count() %>% arrange(desc(n))
+n_distinct(outside_US_sources$country)
+table(outside_US_sources$country)
 ```
 
 Do the same for level1_names (not including US)
 
 ```{r}
-candidate_sources %>% filter(country != 'United States of America') %>% group_by(level1_name) %>% count() %>% arrange(desc(n))
+n_distinct(outside_US_sources$level1_name)
+table(outside_US_sources$level1_name)
 ```
 
 ## Export Data
@@ -135,7 +136,6 @@ candidate_sources %>% filter(country != 'United States of America') %>% group_by
 ### Write to documents
 
 ```{r}
-write.csv(source_summary,"IAV_Source_Summary.csv", row.names = FALSE)
 write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
 write.csv(First_US_Cases,"US_First_Outbreaks.csv", row.names = FALSE)
 ```
