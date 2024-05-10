@@ -29,6 +29,7 @@ world_outbreak_data$Outbreak_start_date <- as_date(world_outbreak_data$Outbreak_
 world_outbreak_data$Outbreak_end_date <- as_date(world_outbreak_data$Outbreak_end_date)
 world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_start_date, world_outbreak_data$Outbreak_end_date)
 ```
+
 ```{r}
 banding <- banding %>% select(-Group_spec, -Total) %>% distinct()
 ```
@@ -140,11 +141,13 @@ candidate_sources %>% group_by(state) %>% filter(country_unique_code!='USA') %>%
 ```
 
 Overall time between infection and outbreak
+
 ```{r}
 candidate_sources %>% filter(country_unique_code!='USA') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 
 Excluding Americas - way longer average
+
 ```{r}
 candidate_sources %>% filter(region!='Americas') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
