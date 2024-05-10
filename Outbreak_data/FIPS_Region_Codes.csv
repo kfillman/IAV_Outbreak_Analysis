@@ -19,7 +19,39 @@ AN,,Andorra,AND
 AO,,Angola,AGO
 AQ,,American Samoa,ASM
 AR,,Argentina,ARG
+AR01,Buenos Aires Province, Argentina,AR
+AR02,Catamarca Province, Argentina,AR
+AR03,Chaco Province, Argentina,AR
+AR04,Chubut Province, Argentina,AR
+AR05,Córdoba Province, Argentina,AR
+AR06,Corrientes Province, Argentina,AR
+AR07,Distrito Federal, Argentina,AR
+AR08,Entre Ríos Province, Argentina,AR
+AR09,Formosa Province, Argentina,AR
+AR10,Jujuy Province, Argentina,AR
+AR11,La Pampa Province, Argentina,AR
+AR12,La Rioja Province, Argentina,AR
+AR13,Mendoza Province, Argentina,AR
+AR14,Misiones Province, Argentina,AR
+AR15,Neuquén Province, Argentina,AR
+AR16,Río Negro Province, Argentina,AR
+AR17,Salta Province, Argentina,AR
+AR18,San Juan Province, Argentina,AR
+AR19,San Luis Province, Argentina,AR
+AR20,Santa Cruz Province, Argentina,AR
+AR21,Santa Fe Province, Argentina,AR
+AR22,Santiago del Estero Province, Argentina,AR
+AR23,Tierra del Fuego, Argentina,AR
+AR24,Tucumán Province, Argentina,AR
 AS,,Australia,AUS
+AS01,Australian Capital Territory, Australia,AUS
+AS02,New South Wales State, Australia,AUS
+AS03,Northern Territory, Australia,AUS
+AS04,Queensland State, Australia,AUS
+AS05,South Australia State, Australia,AUS
+AS06,Tasmania State, Australia,AUS
+AS07,Victoria State, Australia,AUS
+AS08,Western Australia State, Australia,AUS
 AU,,Austria,AUT
 AV,,Anguilla,AIA
 AY,,Antarctica,ATA
@@ -42,13 +74,55 @@ BE,,Belgium,BEL
 BF,,Bahamas,BHS
 BG,,Bangladesh,BGD
 BH,,Belize,BLZ
+BH01,Belize District, Belize,BLZ
+BH02,Cayo District, Belize,BLZ
+BH03,Corozal District, Belize,BLZ
+BH04,Orange Walk District, Belize,BLZ
+BH05,Stann Creek District, Belize,BLZ
+BH06,Toledo District, Belize,BLZ
 BK,,Bosnia and Herzegovina,BIH
 BL,,Bolivia,BOL
+BL01,Chuquisaca Department, Bolivia,BOL
+BL02,Cochabamba Department, Bolivia,BOL
+BL03,Beni Department, Bolivia,BOL
+BL04,La Paz Department, Bolivia,BOL
+BL05,Oruro Department, Bolivia,BOL
+BL06,Pando Department, Bolivia,BOL
+BL07,Potosí Department, Bolivia,BOL
+BL08,Santa Cruz Department, Bolivia,BOL
+BL09,Tarija Department, Bolivia,BOL
 BM,,Myanmar,MMR
 BN,,Benin,BEN
 BO,,Belarus,BLR
 BP,,Solomon Islands,SLB
 BR,,Brazil,BRA
+BR01,Acre State, Brazil,BRA
+BR02,Alagoas State, Brazil,BRA
+BR03,Amapá State, Brazil,BRA
+BR04,Amazonas State, Brazil,BRA
+BR05,Bahia State, Brazil,BRA
+BR06,Ceará State, Brazil,BRA
+BR07,Distrito Federal Federal District, Brazil,BRA
+BR08,Espírito Santo State, Brazil,BRA
+BR11,Mato Grosso do Sul State, Brazil,BRA
+BR13,Maranhão State, Brazil,BRA
+BR14,Mato Grosso State, Brazil,BRA
+BR15,Minas Gerais State, Brazil,BRA
+BR16,Pará State, Brazil,BRA
+BR17,Paraíba State, Brazil,BRA
+BR18,Paraná State, Brazil,BRA
+BR20,Piauí State, Brazil,BRA
+BR21,Rio de Janeiro State, Brazil,BRA
+BR22,Rio Grande do Norte State, Brazil,BRA
+BR23,Rio Grande do Sul State, Brazil,BRA
+BR24,Rondônia State, Brazil,BRA
+BR25,Roraima State, Brazil,BRA
+BR26,Santa Catarina State, Brazil,BRA
+BR27,São Paulo State, Brazil,BRA
+BR28,Sergipe State, Brazil,BRA
+BR29,Goiás State, Brazil,BRA
+BR30,Pernambuco State, Brazil,BRA
+BR31,Tocantins State, Brazil,BRA
 BT,,Bhutan,BTN
 BU,,Bulgaria,BGR
 BV,,Bouvet Island,BVT
@@ -79,18 +153,133 @@ CK,,Cocos Islands,CCK
 CM,,Cameroon,CMR
 CN,,Comoros,COM
 CO,,Colombia,COL
+CO01,Amazonas Department, Colombia,COL
+CO02,Antioquia Department, Colombia,COL
+CO03,Arauca Department, Colombia,COL
+CO04,Atlántico Department, Colombia,COL
+CO08,Caquetá Department, Colombia,COL
+CO09,Cauca Department, Colombia,COL
+CO10,Cesar Department, Colombia,COL
+CO11,Chocó Department, Colombia,COL
+CO12,Córdoba Department, Colombia,COL
+CO14,Guaviare Department, Colombia,COL
+CO15,Guainía Department, Colombia,COL
+CO16,Huila Department, Colombia,COL
+CO17,Guajira Department, Colombia,COL
+CO19,Meta Department, Colombia,COL
+CO20,Nariño Department, Colombia,COL
+CO21,Norte de Santander Department, Colombia,COL
+CO22,Putumayo Department, Colombia,COL
+CO23,Quindío Department, Colombia,COL
+CO24,Risaralda Department, Colombia,COL
+CO25,San Andrés and Providencia Department, Colombia,COL
+CO26,Santander Department, Colombia,COL
+CO27,Sucre Department, Colombia,COL
+CO28,Tolima Department, Colombia,COL
+CO29,Valle del Cauca Department, Colombia,COL
+CO30,Vaupés Department, Colombia,COL
+CO31,Vichada Department, Colombia,COL
+CO32,Casanare Department, Colombia,COL
+CO33,Cundinamarca Department, Colombia,COL
+CO34,Bogotá Capital District, Colombia,COL
+CO35,Bolívar Department, Colombia,COL
+CO36,Boyacá Department, Colombia,COL
+CO37,Caldas Department, Colombia,COL
+CO38,Magdalena Department, Colombia,COL
 CQ,,Northern Mariana Islands,MNP
 CS,,Costa Rica,CRI
+CS01,Alajuela Province, Costa Rica,CRI
+CS02,Cartago Province, Costa Rica,CRI
+CS03,Guanacaste Province, Costa Rica,CRI
+CS04,Heredia Province, Costa Rica,CRI
+CS06,Limón Province, Costa Rica,CRI
+CS07,Puntarenas Province, Costa Rica,CRI
+CS08,San José Province, Costa Rica,CRI
 CT,,Central African Republic,CAF
 CU,,Cuba,CUB
+CU01,Pinar del Río Province, Cuba,CU
+CU02,Ciudad de La Habana Province, Cuba,CU
+CU03,Matanzas Province, Cuba,CU
+CU04,Isla de la Juventud Special Municipality, Cuba,CU
+CU05,Camagüey Province, Cuba,CU
+CU07:,Ciego de Ávila Province, Cuba,CU
+CU08,Cienfuegos Province, Cuba,CU
+CU09,Granma Province, Cuba,CU
+CU10,Guantánamo Province, Cuba,CU
+CU11,La Habana Province, Cuba,CU
+CU12,Holguín Province, Cuba,CU
+CU13,Las Tunas Province, Cuba,CU
+CU14,Sancti Spíritus Province, Cuba,CU
+CU15,Santiago de Cuba Province, Cuba,CU
+CU16,Villa Clara Province, Cuba,CU
 CV,,Cabo Verde,CPV
 CW,,Cook Islands,COK
 CY,,Cyprus,CYP
+DA,,Denmark,DNK
+DA17,Region Hovedstaden, Denmark,DNK
+DA18,Region Midtjylland," Denmark (Incorrectly added as ""Midtjyllen"" in latest change notice)",DNK
+DA19,Region Nordjylland, Denmark,DNK
+DA20,Region Sjælland, Denmark,DNK
+DA21,Region of Southern Denmark, Denmark,DNK
 DJ,,Djibouti,DJI
 DK,,Denmark,DNK
 DO,,Dominica,DMA
 DR,,Dominican Republic,DOM
+DR01,Azua Province, Dominican Republic,DOM
+DR02,Baoruco Province, Dominican Republic,DOM
+DR03,Barahona Province, Dominican Republic,DOM
+DR04,Dajabón Province, Dominican Republic,DOM
+DR06,Duarte Province, Dominican Republic,DOM
+DR08,Espaillat Province, Dominican Republic,DOM
+DR09,Independencia Province, Dominican Republic,DOM
+DR10,La Altagracia Province, Dominican Republic,DOM
+DR11,Elías Piña Province, Dominican Republic,DOM
+DR12,La Romana Province, Dominican Republic,DOM
+DR14,María Trinidad Sánchez Province, Dominican Republic,DOM
+DR15,Monte Cristi Province, Dominican Republic,DOM
+DR16,Pedernales Province, Dominican Republic,DOM
+DR18,Puerto Plata Province, Dominican Republic,DOM
+DR19,Salcedo Province, Dominican Republic,DOM
+DR20,Samaná Province, Dominican Republic,DOM
+DR21,Sánchez Ramírez Province, Dominican Republic,DOM
+DR23,San Juan Province, Dominican Republic,DOM
+DR24,San Pedro de Macorís Province, Dominican Republic,DOM
+DR25,Santiago Province, Dominican Republic,DOM
+DR26,Santiago Rodríguez Province, Dominican Republic,DOM
+DR27,Valverde Province, Dominican Republic,DOM
+DR28,El Seíbo Province, Dominican Republic,DOM
+DR29,Hato Mayor Province, Dominican Republic,DOM
+DR30,La Vega Province, Dominican Republic,DOM
+DR31,Monseñor Nouel Province, Dominican Republic,DOM
+DR32,Monte Plata Province, Dominican Republic,DOM
+DR33,San Cristóbal Province, Dominican Republic,DOM
+DR34,Distrito Nacional, Dominican Republic,DOM
+DR35,Peravia Province, Dominican Republic,DOM
+DR36,San José de Ocoa Province, Dominican Republic,DOM
+DR37,Santo Domingo Province, Dominican Republic,DOM
 EC,,Ecuador,ECU
+EC01,Galápagos Province, Ecuador,ECU
+EC02,Azuay Province, Ecuador,ECU
+EC03,Bolívar Province, Ecuador,ECU
+EC04,Cañar Province, Ecuador,ECU
+EC05,Carchi Province, Ecuador,ECU
+EC06,Chimborazo Province, Ecuador,ECU
+EC07,Cotopaxi Province, Ecuador,ECU
+EC08,El Oro Province, Ecuador,ECU
+EC09,Esmeraldas Province, Ecuador,ECU
+EC10,Guayas Province, Ecuador,ECU
+EC11,Imbabura Province, Ecuador,ECU
+EC12,Loja Province, Ecuador,ECU
+EC13,Los Ríos Province, Ecuador,ECU
+EC14,Manabí Province, Ecuador,ECU
+EC15,Morona-Santiago Province, Ecuador,ECU
+EC17,Pastaza Province, Ecuador,ECU
+EC18,Pichincha Province, Ecuador,ECU
+EC19,Tungurahua Province, Ecuador,ECU
+EC20,Zamora-Chinchipe Province, Ecuador,ECU
+EC22,Sucumbíos Province, Ecuador,ECU
+EC23,Napo Province, Ecuador,ECU
+EC24,Orellana Province, Ecuador,ECU
 EG,,Egypt,EGY
 EI,,Ireland,IRL
 EI01,County Carlow,Ireland,IRL
@@ -123,6 +312,20 @@ EK,,Equatorial Guinea,GNQ
 EN,,Estonia,EST
 ER,,Eritrea,ERI
 ES,,El Salvador,SLV
+ES01,Ahuachapán Department, El Salvador,SLV
+ES02,Cabañas Department, El Salvador,SLV
+ES03,Chalatenango Department, El Salvador,SLV
+ES04,Cuscatlán Department, El Salvador,SLV
+ES05,La Libertad Department, El Salvador,SLV
+ES06,La Paz Department, El Salvador,SLV
+ES07,La Unión Department, El Salvador,SLV
+ES08,Morazán Department, El Salvador,SLV
+ES09,San Miguel Department, El Salvador,SLV
+ES10,San Salvador Department, El Salvador,SLV
+ES11,Santa Ana Department, El Salvador,SLV
+ES12,San Vicente Department, El Salvador,SLV
+ES13,Sonsonate Department, El Salvador,SLV
+ES14,Usulután Department, El Salvador,SLV
 ET,,Ethiopia,ETH
 EZ,,Czechia,CZE
 FG,,French Guiana,GUF
@@ -132,6 +335,7 @@ FK,,Falkland Islands,FLK
 FM,,Micronesia,FSM
 FO,,Faroe Islands,FRO
 FP,,French Polynesia,PYF
+FQ,Baker Island,United States,UMI
 FR,,France,FRA
 FS,,French Southern Territories,ATF
 GA,,Gambia,GMB
@@ -152,17 +356,81 @@ GI,,Gibraltar,GIB
 GJ,,Grenada,GRD
 GK,,Guernsey,GGY
 GL,,Greenland,GRL
+GL01,Nordgronland,Greenland,GRL
+GL02,Ostgronland,Greenland,GRL
+GL03,Vestgronland,Greenland,GRL
 GM,,Germany,DEU
 GP,,Guadeloupe,GLP
 GQ,,Guam,GUM
 GR,,Greece,GRC
 GT,,Guatemala,GTM
+GT01,Alta Verapaz Department,Guatamala,GTM
+GT02,Baja Verapaz Department,Guatamala,GTM
+GT03,Chimaltenango Department,Guatamala,GTM
+GT04,Chiquimula Department,Guatamala,GTM
+GT05,El Progreso Department,Guatamala,GTM
+GT06,Escuintla Department,Guatamala,GTM
+GT07,Guatemala Department,Guatamala,GTM
+GT08,Huehuetenango Department,Guatamala,GTM
+GT09,Izabal Department,Guatamala,GTM
+GT10,Jalapa Department,Guatamala,GTM
+GT11,Jutiapa Department,Guatamala,GTM
+GT12,Petén Department,Guatamala,GTM
+GT13,Quetzaltenango Department,Guatamala,GTM
+GT14,Quiché Department,Guatamala,GTM
+GT15,Retalhuleu Department,Guatamala,GTM
+GT16,Sacatepéquez Department,Guatamala,GTM
+GT17,San Marcos Department,Guatamala,GTM
+GT18,Santa Rosa Department,Guatamala,GTM
+GT19,Solola Department,Guatamala,GTM
+GT20,Suchitepéquez Department,Guatamala,GTM
+GT21,Totonicapán Department,Guatamala,GTM
+GT22,Zacapa Department,Guatamala,GTM
 GV,,Guinea,GIN
 GY,,Guyana,GUY
+GY10,Barima-Waini Region,Guyana,GUY
+GY11,Cuyuni-Mazaruni Region,Guyana,GUY
+GY12,Demerara-Mahaica Region,Guyana,GUY
+GY13,East Berbice-Corentyne Region,Guyana,GUY
+GY14,Essequibo Islands-West Demerara Region,Guyana,GUY
+GY15,Mahaica-Berbice Region,Guyana,GUY
+GY16,Pomeroon-Supenaam Region,Guyana,GUY
+GY17,Potaro-Siparuni Region,Guyana,GUY
+GY18,Upper Demerara-Berbice Region,Guyana,GUY
+GY19,Upper Takutu-Upper Essequibo Region,Guyana,GUY
 HA,,Haiti,HTI
+HA03,Nord-Ouest Department, Haiti,HTI
+HA06,Artibonite Department, Haiti,HTI
+HA07,Centre Department, Haiti,HTI
+HA09,Nord Department, Haiti,HTI
+HA10,Nord-Est Department, Haiti,HTI
+HA11,Ouest Department, Haiti,HTI
+HA12,Sud Department, Haiti,HTI
+HA13,Sud-Est Department, Haiti,HTI
+HA14,Grand'Anse Department, Haiti,HTI
+HA15,Nippes Department, Haiti,HTI
 HK,,Hong Kong,HKG
 HM,,Heard Island and McDonald Islands,HMD
 HO,,Honduras,HND
+HO01,Atlántida Department,Honduras,HND
+HO02,Choluteca Department,Honduras,HND
+HO03,Colón Department,Honduras,HND
+HO04,Comayagua Department,Honduras,HND
+HO05,Copán Department,Honduras,HND
+HO06,Cortés Department,Honduras,HND
+HO07,El Paraíso Department,Honduras,HND
+HO08,Francisco Morazán Department,Honduras,HND
+HO09,Gracias a Dios Department,Honduras,HND
+HO10,Intibucá Department,Honduras,HND
+HO11,Islas de la Bahía Department,Honduras,HND
+HO12,La Paz Department,Honduras,HND
+HO13,Lempira Department,Honduras,HND
+HO14,Ocotepeque Department,Honduras,HND
+HO15,Olancho Department,Honduras,HND
+HO16,Santa Bárbara Department,Honduras,HND
+HO17,Valle Department,Honduras,HND
+HO18,Yoro Department,Honduras,HND
+HQ,Howard Island,United States,UMI
 HR,,Croatia,HRV
 HU,,Hungary,HUN
 IC,,Iceland,ISL
@@ -225,7 +493,22 @@ JA46,Yamanashi Prefecture,Japan,JPN
 JA47,Okinawa Prefecture,Japan,JPN
 JE,,Jersey,JEY
 JM,,Jamaica,JAM
+JM01,Clarendon Parish, Jamaica,JAM
+JM02,Hanover Parish, Jamaica,JAM
+JM04,Manchester Parish, Jamaica,JAM
+JM07,Portland Parish, Jamaica,JAM
+JM08,Saint Andrew Parish, Jamaica,JAM
+JM09,Saint Ann Parish, Jamaica,JAM
+JM10,Saint Catherine Parish, Jamaica,JAM
+JM11,Saint Elizabeth Parish, Jamaica,JAM
+JM12,Saint James Parish, Jamaica,JAM
+JM13,Saint Mary Parish, Jamaica,JAM
+JM14,Saint Thomas Parish, Jamaica,JAM
+JM15,Trelawny Parish, Jamaica,JAM
+JM16,Westmoreland Parish, Jamaica,JAM
+JM17,Kingston Parish, Jamaica,JAM
 JO,,Jordan,JOR
+JQ,Johnston Atoll,United States,UMI
 KE,,Kenya,KEN
 KG,,Kyrgyzstan,KGZ
 KN,,Democratic People's Republic of Korea,PRK
@@ -258,6 +541,7 @@ ML,,Mali,MLI
 MN,,Monaco,MCO
 MO,,Morocco,MAR
 MP,,Mauritius,MUS
+MQ,Midway Islands,United States,UMI
 MR,,Mauritania,MRT
 MT,,Malta,MLT
 MU,,Oman,OMN
@@ -304,8 +588,39 @@ NG,,Niger,NER
 NH,,Vanuatu,VUT
 NI,,Nigeria,NGA
 NL,,Netherlands,NLD
+NL01,Drenthe,Netherlands,NLD
+NL02,Friesland,Netherlands,NLD
+NL03,Gelderland,Netherlands,NLD
+NL04,Groningen Province,Netherlands,NLD
+NL05,Limburg Province,Netherlands,NLD
+NL06,North Brabant Province,Netherlands,NLD
+NL07,North Holland Province,Netherlands,NLD
+NL09,Utrecht Province,Netherlands,NLD
+NL10,Zeeland,Netherlands,NLD
+NL11,South Holland Province,Netherlands,NLD
+NL15,Overijssel,Netherlands,NLD
+NL16,Flevoland,Netherlands,NLD
 NN,,Sint Maarten,SXM
 NO,,Norway,NOR
+NO01,Akershus,Norway,NOR
+NO02,Aust-Agder,Norway,NOR
+NO04,Buskerud,Norway,NOR
+NO05,Finnmark,Norway,NOR
+NO06,Hedmark,Norway,NOR
+NO07,Hordaland,Norway,NOR
+NO08,Møre og Romsdal,Norway,NOR
+NO09,Nordland,Norway,NOR
+NO11,Oppland,Norway,NOR
+NO12,Oslo,Norway,NOR
+NO13,Østfold,Norway,NOR
+NO14,Rogaland,Norway,NOR
+NO15,Sogn og Fjordane,Norway,NOR
+NO16,Sør-Trøndelag,Norway,NOR
+NO17,Telemark,Norway,NOR
+NO18,Troms,Norway,NOR
+NO19,Vest-Agder,Norway,NOR
+NO20,Vestfold,Norway,NOR
+NO21,Trøndelag,Norway,NOR
 NP,,Nepal,NPL
 NR,,Nauru,NRU
 NS,,Suriname,SUR
@@ -319,12 +634,55 @@ NS16,Paramaribo District,Suriname,SUR
 NS17,Saramacca District,Suriname,SUR
 NS18,Sipaliwini District,Suriname,SUR
 NS19,Wanica District,Suriname,SUR
+NT,,Netherlands Antilles,NLD
 NU,,Nicaragua,NIC
+NU01,Boaco Department,Nicaragua,NIC
+NU02,Carazo Department,Nicaragua,NIC
+NU03,Chinandega Department,Nicaragua,NIC
+NU04,Chontales Department,Nicaragua,NIC
+NU05,Estelí Department,Nicaragua,NIC
+NU06,Granada Department,Nicaragua,NIC
+NU07,Jinotega Department,Nicaragua,NIC
+NU08,León Department,Nicaragua,NIC
+NU09,Madriz Department,Nicaragua,NIC
+NU10,Managua Department,Nicaragua,NIC
+NU11,Masaya Department,Nicaragua,NIC
+NU12,Matagalpa Department,Nicaragua,NIC
+NU13,Nueva Segovia Department,Nicaragua,NIC
+NU14,Río San Juan Department,Nicaragua,NIC
+NU15,Rivas Department,Nicaragua,NIC
+NU17,North Caribbean Coast Autonomous Region,Nicaragua,NIC
+NU18,South Caribbean Coast Autonomous Region,Nicaragua,NIC
 NZ,,New Zealand,NZL
 OD,,South Sudan,SSD
 PA,,Paraguay,PRY
 PC,,Pitcairn,PCN
 PE,,Peru,PER
+PE01,Amazonas Region, Peru,PER
+PE02,Ancash Region, Peru,PER
+PE03,Apurímac Region, Peru,PER
+PE04,Arequipa Region, Peru,PER
+PE05,Ayacucho Region, Peru,PER
+PE06,Cajamarca Region, Peru,PER
+PE07,Callao Region, Peru,PER
+PE08,Cusco Region, Peru,PER
+PE09,Huancavelica Region, Peru,PER
+PE10,Huánuco Region, Peru,PER
+PE11,Ica Region, Peru,PER
+PE12,Junín Region, Peru,PER
+PE13,La Libertad Region, Peru,PER
+PE14,Lambayeque Region, Peru,PER
+PE15,Lima Region, Peru,PER
+PE16,Loreto Region, Peru,PER
+PE17,Madre de Dios Region, Peru,PER
+PE18,Moquegua Region, Peru,PER
+PE19,Pasco Region, Peru,PER
+PE20,Piura Region, Peru,PER
+PE21,Puno Region, Peru,PER
+PE22,San Martín Region, Peru,PER
+PE23,Tacna Region, Peru,PER
+PE24,Tumbes Region, Peru,PER
+PE25,Ucayali Region, Peru,PER
 PK,,Pakistan,PAK
 PL,,Poland,POL
 PM,,Panama,PAN
@@ -340,6 +698,26 @@ PM09,San Blas Territory,Panama,PAN
 PM10,Veraguas Province,Panama,PAN
 PO,,Portugal,PRT
 PP,,Papua New Guinea,PNG
+PP01,Central Province, Papua New Guinea,PNG
+PP02,Gulf Province, Papua New Guinea,PNG
+PP03,Milne Bay Province, Papua New Guinea,PNG
+PP04,Northern Province, Papua New Guinea,PNG
+PP05,Southern Highlands Province, Papua New Guinea,PNG
+PP06,Western Province, Papua New Guinea,PNG
+PP07,Bougainville Province, Papua New Guinea,PNG
+PP08,Chimbu Province, Papua New Guinea,PNG
+PP09,Eastern Highlands Province, Papua New Guinea,PNG
+PP10,East New Britain Province, Papua New Guinea,PNG
+PP11,East Sepik Province, Papua New Guinea,PNG
+PP12,Madang Province, Papua New Guinea,PNG
+PP13,Manus Province, Papua New Guinea,PNG
+PP14,Morobe Province, Papua New Guinea,PNG
+PP15,New Ireland Province, Papua New Guinea,PNG
+PP16,Western Highlands Province, Papua New Guinea,PNG
+PP17,West New Britain Province, Papua New Guinea,PNG
+PP18,Sandaun Province, Papua New Guinea,PNG
+PP19,Enga Province, Papua New Guinea,PNG
+PP20,National Capital Province, Papua New Guinea,PNG
 PS,,Palau,PLW
 PU,,Guinea-Bissau,GNB
 QA,,Qatar,QAT
@@ -466,6 +844,8 @@ TL,,Tokelau,TKL
 TN,,Tonga,TON
 TO,,Togo,TGO
 TP,,Sao Tome and Principe,STP
+TP01,Príncipe, São Tomé and Príncipe,STP
+TP02,São Tomé, São Tomé and Príncipe,STP
 TS,,Tunisia,TUN
 TT,,Timor-Leste,TLS
 TU,,Turkey,TUR
@@ -795,375 +1175,9 @@ WA,,Namibia,NAM
 WE,,Palestine,PSE
 WF,,Wallis and Futuna,WLF
 WI,,Western Sahara,ESH
+WQ,Wake Island,United States,USA
 WS,,Samoa,WSM
 WZ,,Eswatini,SWZ
 YM,,Yemen,YEM
 ZA,,Zambia,ZMB
 ZI,,Zimbabwe,ZWE
-AR01,Buenos Aires Province, Argentina,AR
-AR02,Catamarca Province, Argentina,AR
-AR03,Chaco Province, Argentina,AR
-AR04,Chubut Province, Argentina,AR
-AR05,Córdoba Province, Argentina,AR
-AR06,Corrientes Province, Argentina,AR
-AR07,Distrito Federal, Argentina,AR
-AR08,Entre Ríos Province, Argentina,AR
-AR09,Formosa Province, Argentina,AR
-AR10,Jujuy Province, Argentina,AR
-AR11,La Pampa Province, Argentina,AR
-AR12,La Rioja Province, Argentina,AR
-AR13,Mendoza Province, Argentina,AR
-AR14,Misiones Province, Argentina,AR
-AR15,Neuquén Province, Argentina,AR
-AR16,Río Negro Province, Argentina,AR
-AR17,Salta Province, Argentina,AR
-AR18,San Juan Province, Argentina,AR
-AR19,San Luis Province, Argentina,AR
-AR20,Santa Cruz Province, Argentina,AR
-AR21,Santa Fe Province, Argentina,AR
-AR22,Santiago del Estero Province, Argentina,AR
-AR23,Tierra del Fuego, Argentina,AR
-AR24,Tucumán Province, Argentina,AR
-CU01,Pinar del Río Province, Cuba,CU
-CU02,Ciudad de La Habana Province, Cuba,CU
-CU03,Matanzas Province, Cuba,CU
-CU04,Isla de la Juventud Special Municipality, Cuba,CU
-CU05,Camagüey Province, Cuba,CU
-CU07:,Ciego de Ávila Province, Cuba,CU
-CU08,Cienfuegos Province, Cuba,CU
-CU09,Granma Province, Cuba,CU
-CU10,Guantánamo Province, Cuba,CU
-CU11,La Habana Province, Cuba,CU
-CU12,Holguín Province, Cuba,CU
-CU13,Las Tunas Province, Cuba,CU
-CU14,Sancti Spíritus Province, Cuba,CU
-CU15,Santiago de Cuba Province, Cuba,CU
-CU16,Villa Clara Province, Cuba,CU
-AS01,Australian Capital Territory, Australia,AUS
-AS02,New South Wales State, Australia,AUS
-AS03,Northern Territory, Australia,AUS
-AS04,Queensland State, Australia,AUS
-AS05,South Australia State, Australia,AUS
-AS06,Tasmania State, Australia,AUS
-AS07,Victoria State, Australia,AUS
-AS08,Western Australia State, Australia,AUS
-BH01,Belize District, Belize,BLZ
-BH02,Cayo District, Belize,BLZ
-BH03,Corozal District, Belize,BLZ
-BH04,Orange Walk District, Belize,BLZ
-BH05,Stann Creek District, Belize,BLZ
-BH06,Toledo District, Belize,BLZ
-BR01,Acre State, Brazil,BRA
-BR02,Alagoas State, Brazil,BRA
-BR03,Amapá State, Brazil,BRA
-BR04,Amazonas State, Brazil,BRA
-BR05,Bahia State, Brazil,BRA
-BR06,Ceará State, Brazil,BRA
-BR07,Distrito Federal Federal District, Brazil,BRA
-BR08,Espírito Santo State, Brazil,BRA
-BR11,Mato Grosso do Sul State, Brazil,BRA
-BR13,Maranhão State, Brazil,BRA
-BR14,Mato Grosso State, Brazil,BRA
-BR15,Minas Gerais State, Brazil,BRA
-BR16,Pará State, Brazil,BRA
-BR17,Paraíba State, Brazil,BRA
-BR18,Paraná State, Brazil,BRA
-BR20,Piauí State, Brazil,BRA
-BR21,Rio de Janeiro State, Brazil,BRA
-BR22,Rio Grande do Norte State, Brazil,BRA
-BR23,Rio Grande do Sul State, Brazil,BRA
-BR24,Rondônia State, Brazil,BRA
-BR25,Roraima State, Brazil,BRA
-BR26,Santa Catarina State, Brazil,BRA
-BR27,São Paulo State, Brazil,BRA
-BR28,Sergipe State, Brazil,BRA
-BR29,Goiás State, Brazil,BRA
-BR30,Pernambuco State, Brazil,BRA
-BR31,Tocantins State, Brazil,BRA
-CO01,Amazonas Department, Colombia,COL
-CO02,Antioquia Department, Colombia,COL
-CO03,Arauca Department, Colombia,COL
-CO04,Atlántico Department, Colombia,COL
-CO08,Caquetá Department, Colombia,COL
-CO09,Cauca Department, Colombia,COL
-CO10,Cesar Department, Colombia,COL
-CO11,Chocó Department, Colombia,COL
-CO12,Córdoba Department, Colombia,COL
-CO14,Guaviare Department, Colombia,COL
-CO15,Guainía Department, Colombia,COL
-CO16,Huila Department, Colombia,COL
-CO17,Guajira Department, Colombia,COL
-CO19,Meta Department, Colombia,COL
-CO20,Nariño Department, Colombia,COL
-CO21,Norte de Santander Department, Colombia,COL
-CO22,Putumayo Department, Colombia,COL
-CO23,Quindío Department, Colombia,COL
-CO24,Risaralda Department, Colombia,COL
-CO25,San Andrés and Providencia Department, Colombia,COL
-CO26,Santander Department, Colombia,COL
-CO27,Sucre Department, Colombia,COL
-CO28,Tolima Department, Colombia,COL
-CO29,Valle del Cauca Department, Colombia,COL
-CO30,Vaupés Department, Colombia,COL
-CO31,Vichada Department, Colombia,COL
-CO32,Casanare Department, Colombia,COL
-CO33,Cundinamarca Department, Colombia,COL
-CO34,Bogotá Capital District, Colombia,COL
-CO35,Bolívar Department, Colombia,COL
-CO36,Boyacá Department, Colombia,COL
-CO37,Caldas Department, Colombia,COL
-CO38,Magdalena Department, Colombia,COL
-CS01,Alajuela Province, Costa Rica,CRI
-CS02,Cartago Province, Costa Rica,CRI
-CS03,Guanacaste Province, Costa Rica,CRI
-CS04,Heredia Province, Costa Rica,CRI
-CS06,Limón Province, Costa Rica,CRI
-CS07,Puntarenas Province, Costa Rica,CRI
-CS08,San José Province, Costa Rica,CRI
-DA17,Region Hovedstaden, Denmark,DNK
-DA18,Region Midtjylland," Denmark (Incorrectly added as ""Midtjyllen"" in latest change notice)",DNK
-DA19,Region Nordjylland, Denmark,DNK
-DA20,Region Sjælland, Denmark,DNK
-DA21,Region of Southern Denmark, Denmark,DNK
-DR01,Azua Province, Dominican Republic,DOM
-DR02,Baoruco Province, Dominican Republic,DOM
-DR03,Barahona Province, Dominican Republic,DOM
-DR04,Dajabón Province, Dominican Republic,DOM
-DR06,Duarte Province, Dominican Republic,DOM
-DR08,Espaillat Province, Dominican Republic,DOM
-DR09,Independencia Province, Dominican Republic,DOM
-DR10,La Altagracia Province, Dominican Republic,DOM
-DR11,Elías Piña Province, Dominican Republic,DOM
-DR12,La Romana Province, Dominican Republic,DOM
-DR14,María Trinidad Sánchez Province, Dominican Republic,DOM
-DR15,Monte Cristi Province, Dominican Republic,DOM
-DR16,Pedernales Province, Dominican Republic,DOM
-DR18,Puerto Plata Province, Dominican Republic,DOM
-DR19,Salcedo Province, Dominican Republic,DOM
-DR20,Samaná Province, Dominican Republic,DOM
-DR21,Sánchez Ramírez Province, Dominican Republic,DOM
-DR23,San Juan Province, Dominican Republic,DOM
-DR24,San Pedro de Macorís Province, Dominican Republic,DOM
-DR25,Santiago Province, Dominican Republic,DOM
-DR26,Santiago Rodríguez Province, Dominican Republic,DOM
-DR27,Valverde Province, Dominican Republic,DOM
-DR28,El Seíbo Province, Dominican Republic,DOM
-DR29,Hato Mayor Province, Dominican Republic,DOM
-DR30,La Vega Province, Dominican Republic,DOM
-DR31,Monseñor Nouel Province, Dominican Republic,DOM
-DR32,Monte Plata Province, Dominican Republic,DOM
-DR33,San Cristóbal Province, Dominican Republic,DOM
-DR34,Distrito Nacional, Dominican Republic,DOM
-DR35,Peravia Province, Dominican Republic,DOM
-DR36,San José de Ocoa Province, Dominican Republic,DOM
-DR37,Santo Domingo Province, Dominican Republic,DOM
-EC01,Galápagos Province, Ecuador,ECU
-EC02,Azuay Province, Ecuador,ECU
-EC03,Bolívar Province, Ecuador,ECU
-EC04,Cañar Province, Ecuador,ECU
-EC05,Carchi Province, Ecuador,ECU
-EC06,Chimborazo Province, Ecuador,ECU
-EC07,Cotopaxi Province, Ecuador,ECU
-EC08,El Oro Province, Ecuador,ECU
-EC09,Esmeraldas Province, Ecuador,ECU
-EC10,Guayas Province, Ecuador,ECU
-EC11,Imbabura Province, Ecuador,ECU
-EC12,Loja Province, Ecuador,ECU
-EC13,Los Ríos Province, Ecuador,ECU
-EC14,Manabí Province, Ecuador,ECU
-EC15,Morona-Santiago Province, Ecuador,ECU
-EC17,Pastaza Province, Ecuador,ECU
-EC18,Pichincha Province, Ecuador,ECU
-EC19,Tungurahua Province, Ecuador,ECU
-EC20,Zamora-Chinchipe Province, Ecuador,ECU
-EC22,Sucumbíos Province, Ecuador,ECU
-EC23,Napo Province, Ecuador,ECU
-EC24,Orellana Province, Ecuador,ECU
-ES01,Ahuachapán Department, El Salvador,SLV
-ES02,Cabañas Department, El Salvador,SLV
-ES03,Chalatenango Department, El Salvador,SLV
-ES04,Cuscatlán Department, El Salvador,SLV
-ES05,La Libertad Department, El Salvador,SLV
-ES06,La Paz Department, El Salvador,SLV
-ES07,La Unión Department, El Salvador,SLV
-ES08,Morazán Department, El Salvador,SLV
-ES09,San Miguel Department, El Salvador,SLV
-ES10,San Salvador Department, El Salvador,SLV
-ES11,Santa Ana Department, El Salvador,SLV
-ES12,San Vicente Department, El Salvador,SLV
-ES13,Sonsonate Department, El Salvador,SLV
-ES14,Usulután Department, El Salvador,SLV
-HA03,Nord-Ouest Department, Haiti,HTI
-HA06,Artibonite Department, Haiti,HTI
-HA07,Centre Department, Haiti,HTI
-HA09,Nord Department, Haiti,HTI
-HA10,Nord-Est Department, Haiti,HTI
-HA11,Ouest Department, Haiti,HTI
-HA12,Sud Department, Haiti,HTI
-HA13,Sud-Est Department, Haiti,HTI
-HA14,Grand'Anse Department, Haiti,HTI
-HA15,Nippes Department, Haiti,HTI
-GY10,Barima-Waini Region,Guyana,GUY
-GY11,Cuyuni-Mazaruni Region,Guyana,GUY
-GY12,Demerara-Mahaica Region,Guyana,GUY
-GY13,East Berbice-Corentyne Region,Guyana,GUY
-GY14,Essequibo Islands-West Demerara Region,Guyana,GUY
-GY15,Mahaica-Berbice Region,Guyana,GUY
-GY16,Pomeroon-Supenaam Region,Guyana,GUY
-GY17,Potaro-Siparuni Region,Guyana,GUY
-GY18,Upper Demerara-Berbice Region,Guyana,GUY
-GY19,Upper Takutu-Upper Essequibo Region,Guyana,GUY
-GT01,Alta Verapaz Department,Guatamala,GTM
-GT02,Baja Verapaz Department,Guatamala,GTM
-GT03,Chimaltenango Department,Guatamala,GTM
-GT04,Chiquimula Department,Guatamala,GTM
-GT05,El Progreso Department,Guatamala,GTM
-GT06,Escuintla Department,Guatamala,GTM
-GT07,Guatemala Department,Guatamala,GTM
-GT08,Huehuetenango Department,Guatamala,GTM
-GT09,Izabal Department,Guatamala,GTM
-GT10,Jalapa Department,Guatamala,GTM
-GT11,Jutiapa Department,Guatamala,GTM
-GT12,Petén Department,Guatamala,GTM
-GT13,Quetzaltenango Department,Guatamala,GTM
-GT14,Quiché Department,Guatamala,GTM
-GT15,Retalhuleu Department,Guatamala,GTM
-GT16,Sacatepéquez Department,Guatamala,GTM
-GT17,San Marcos Department,Guatamala,GTM
-GT18,Santa Rosa Department,Guatamala,GTM
-GT19,Solola Department,Guatamala,GTM
-GT20,Suchitepéquez Department,Guatamala,GTM
-GT21,Totonicapán Department,Guatamala,GTM
-GT22,Zacapa Department,Guatamala,GTM
-GL01,Nordgronland,Greenland,GRL
-GL02,Ostgronland,Greenland,GRL
-GL03,Vestgronland,Greenland,GRL
-HO01,Atlántida Department,Honduras,HND
-HO02,Choluteca Department,Honduras,HND
-HO03,Colón Department,Honduras,HND
-HO04,Comayagua Department,Honduras,HND
-HO05,Copán Department,Honduras,HND
-HO06,Cortés Department,Honduras,HND
-HO07,El Paraíso Department,Honduras,HND
-HO08,Francisco Morazán Department,Honduras,HND
-HO09,Gracias a Dios Department,Honduras,HND
-HO10,Intibucá Department,Honduras,HND
-HO11,Islas de la Bahía Department,Honduras,HND
-HO12,La Paz Department,Honduras,HND
-HO13,Lempira Department,Honduras,HND
-HO14,Ocotepeque Department,Honduras,HND
-HO15,Olancho Department,Honduras,HND
-HO16,Santa Bárbara Department,Honduras,HND
-HO17,Valle Department,Honduras,HND
-HO18,Yoro Department,Honduras,HND
-NO01,Akershus,Norway,NOR
-NO02,Aust-Agder,Norway,NOR
-NO04,Buskerud,Norway,NOR
-NO05,Finnmark,Norway,NOR
-NO06,Hedmark,Norway,NOR
-NO07,Hordaland,Norway,NOR
-NO08,Møre og Romsdal,Norway,NOR
-NO09,Nordland,Norway,NOR
-NO11,Oppland,Norway,NOR
-NO12,Oslo,Norway,NOR
-NO13,Østfold,Norway,NOR
-NO14,Rogaland,Norway,NOR
-NO15,Sogn og Fjordane,Norway,NOR
-NO16,Sør-Trøndelag,Norway,NOR
-NO17,Telemark,Norway,NOR
-NO18,Troms,Norway,NOR
-NO19,Vest-Agder,Norway,NOR
-NO20,Vestfold,Norway,NOR
-NO21,Trøndelag,Norway,NOR
-NU01,Boaco Department,Nicaragua,NIC
-NU02,Carazo Department,Nicaragua,NIC
-NU03,Chinandega Department,Nicaragua,NIC
-NU04,Chontales Department,Nicaragua,NIC
-NU05,Estelí Department,Nicaragua,NIC
-NU06,Granada Department,Nicaragua,NIC
-NU07,Jinotega Department,Nicaragua,NIC
-NU08,León Department,Nicaragua,NIC
-NU09,Madriz Department,Nicaragua,NIC
-NU10,Managua Department,Nicaragua,NIC
-NU11,Masaya Department,Nicaragua,NIC
-NU12,Matagalpa Department,Nicaragua,NIC
-NU13,Nueva Segovia Department,Nicaragua,NIC
-NU14,Río San Juan Department,Nicaragua,NIC
-NU15,Rivas Department,Nicaragua,NIC
-NU17,North Caribbean Coast Autonomous Region,Nicaragua,NIC
-NU18,South Caribbean Coast Autonomous Region,Nicaragua,NIC
-PE01,Amazonas Region, Peru,PER
-PE02,Ancash Region, Peru,PER
-PE03,Apurímac Region, Peru,PER
-PE04,Arequipa Region, Peru,PER
-PE05,Ayacucho Region, Peru,PER
-PE06,Cajamarca Region, Peru,PER
-PE07,Callao Region, Peru,PER
-PE08,Cusco Region, Peru,PER
-PE09,Huancavelica Region, Peru,PER
-PE10,Huánuco Region, Peru,PER
-PE11,Ica Region, Peru,PER
-PE12,Junín Region, Peru,PER
-PE13,La Libertad Region, Peru,PER
-PE14,Lambayeque Region, Peru,PER
-PE15,Lima Region, Peru,PER
-PE16,Loreto Region, Peru,PER
-PE17,Madre de Dios Region, Peru,PER
-PE18,Moquegua Region, Peru,PER
-PE19,Pasco Region, Peru,PER
-PE20,Piura Region, Peru,PER
-PE21,Puno Region, Peru,PER
-PE22,San Martín Region, Peru,PER
-PE23,Tacna Region, Peru,PER
-PE24,Tumbes Region, Peru,PER
-PE25,Ucayali Region, Peru,PER
-PP01,Central Province, Papua New Guinea,PNG
-PP02,Gulf Province, Papua New Guinea,PNG
-PP03,Milne Bay Province, Papua New Guinea,PNG
-PP04,Northern Province, Papua New Guinea,PNG
-PP05,Southern Highlands Province, Papua New Guinea,PNG
-PP06,Western Province, Papua New Guinea,PNG
-PP07,Bougainville Province, Papua New Guinea,PNG
-PP08,Chimbu Province, Papua New Guinea,PNG
-PP09,Eastern Highlands Province, Papua New Guinea,PNG
-PP10,East New Britain Province, Papua New Guinea,PNG
-PP11,East Sepik Province, Papua New Guinea,PNG
-PP12,Madang Province, Papua New Guinea,PNG
-PP13,Manus Province, Papua New Guinea,PNG
-PP14,Morobe Province, Papua New Guinea,PNG
-PP15,New Ireland Province, Papua New Guinea,PNG
-PP16,Western Highlands Province, Papua New Guinea,PNG
-PP17,West New Britain Province, Papua New Guinea,PNG
-PP18,Sandaun Province, Papua New Guinea,PNG
-PP19,Enga Province, Papua New Guinea,PNG
-PP20,National Capital Province, Papua New Guinea,PNG
-TP01,Príncipe, São Tomé and Príncipe,STP
-TP02,São Tomé, São Tomé and Príncipe,STP
-JM01,Clarendon Parish, Jamaica,JAM
-JM02,Hanover Parish, Jamaica,JAM
-JM04,Manchester Parish, Jamaica,JAM
-JM07,Portland Parish, Jamaica,JAM
-JM08,Saint Andrew Parish, Jamaica,JAM
-JM09,Saint Ann Parish, Jamaica,JAM
-JM10,Saint Catherine Parish, Jamaica,JAM
-JM11,Saint Elizabeth Parish, Jamaica,JAM
-JM12,Saint James Parish, Jamaica,JAM
-JM13,Saint Mary Parish, Jamaica,JAM
-JM14,Saint Thomas Parish, Jamaica,JAM
-JM15,Trelawny Parish, Jamaica,JAM
-JM16,Westmoreland Parish, Jamaica,JAM
-JM17,Kingston Parish, Jamaica,JAM
-BL01,Chuquisaca Department, Bolivia,BOL
-BL02,Cochabamba Department, Bolivia,BOL
-BL03,Beni Department, Bolivia,BOL
-BL04,La Paz Department, Bolivia,BOL
-BL05,Oruro Department, Bolivia,BOL
-BL06,Pando Department, Bolivia,BOL
-BL07,Potosí Department, Bolivia,BOL
-BL08,Santa Cruz Department, Bolivia,BOL
-BL09,Tarija Department, Bolivia,BOL
-DA17,Region Hovedstaden, Denmark,DNK
-DA18,Region Midtjylland, Denmark,DNK
-DA19,Region Nordjylland, Denmark,DNK
-DA20,Region Sjælland, Denmark,DNK
-DA21,Region of Southern Denmark, Denmark,DNK
