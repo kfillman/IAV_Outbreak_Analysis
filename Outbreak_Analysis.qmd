@@ -103,28 +103,36 @@ candidate_sources <- candidate_sources %>%
 
 ## Using candidate_sources
 
-Create new variable that excludes state data (one row per potential event) & US sources
+Number of potential source events including & excluding US
 ```{r}
-distinct_sources <-candidate_sources %>% filter(country_unique_code!='USA') %>% distinct(Outbreak_id, .keep_all = TRUE)
-sort(table(non_US_Sources$country))
-```
-Find most abundant source locations
-```{r}
-tail(sort(table(distinct_sources$level1_name)))
+candidate_sources %>% distinct(Outbreak_id, .keep_all = TRUE)%>% nrow()
+candidate_sources %>% filter(country_unique_code!='USA') %>% distinct(Outbreak_id, .keep_all = TRUE) %>% nrow()
 ```
 
-Average time between state first infection and potential source (per state)
+Find potential source countries & their number of distinct events
 ```{r}
-candidate_sources %>% group_by(state) %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date))
+candidate_sources %>% filter(country_unique_code!='USA') %>% distinct(Outbreak_id, .keep_all = TRUE) %>% count(country) %>% arrange(desc(n))
 ```
 
-Overall
+POTENTIAL USE: limit time_to_infection
 ```{r}
-candidate_sources %>%  summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+candidate_sources %>% 
+  mutate(time_to_infection=(state_first_infection-Outbreak_start_date)) %>%
+  filter(time_to_infection<90) %>%
+  select(time_to_infection) %>%
+  summarise(mean=mean(time_to_infection))
 ```
-For outside US only- not much difference
+
+
+
+Average time between state first infection and potential source (per state).
 ```{r}
-outside_US_sources %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+candidate_sources %>% group_by(state) %>% filter(country_unique_code!='USA') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date))
+```
+
+Overall time between infection and outbreak
+```{r}
+candidate_sources %>% filter(country_unique_code!='USA') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 Excluding Americas - way longer average
 ```{r}
@@ -133,6 +141,41 @@ candidate_sources %>% filter(region!='Americas') %>% summarise(time_to_infection
 Just Canada
 ```{r}
 candidate_sources %>% filter(country=='Canada') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+
+### Average Warning Times Per Proposed Monitoring Locations
+
+Victoria, British Columbia, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Victoria') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Edmonton, Alberta, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Edmonton') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Regina, Saskatchewan, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Winnipeg, Manitoba, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Winnipeg') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Toronto, Ontario, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Toronto') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Regina, Saskatchewan, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Regina, Saskatchewan, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
+```
+Regina, Saskatchewan, Canada
+```{r}
+candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 
 ## Export Data
