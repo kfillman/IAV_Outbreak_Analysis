@@ -7,6 +7,8 @@ editor: visual
 
 # HPAI Outbreak Analysis
 
+# Creating Candidate Source List
+
 ## Import data & libraries
 
 ```{r Data & Library Import, echo = FALSE}
@@ -34,21 +36,18 @@ world_outbreak_data$outbreak_dates <- interval(world_outbreak_data$Outbreak_star
 First_US_Cases <- filter(world_outbreak_data, iso_code=='USA') %>% select(country_unique_code, level1_name, level2_name, Latitude, Longitude, Outbreak_start_date, outbreak_dates, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng) %>% arrange(Outbreak_start_date) %>% distinct(level1_name, .keep_all = TRUE)
 ```
 
-## Create list of connections to/within the US
+## Create Candiate Source List
+
+Create list of connections to/within the US using banding and FIPS. Need FIPS doc because banding uses FIPS and world outbreak data uses ISO3.
 
 ```{r}
 US_connections <- banding %>% filter_all(any_vars(. %in% 'US')) %>% filter(!(FIPS_ADMIN_banding==FIPS_ADMIN_Recov))  %>% left_join(FIPS_codes, by=c('FIPS_ADMIN_banding'='FIPS.Region.Code')) %>% left_join(FIPS_codes, by=c('FIPS_ADMIN_Recov'='FIPS.Region.Code'))
 ```
 
-## Find Connections to First State
-
-### Create list of connections between state & worldwide locations
-
+Create list of connections between state & worldwide locations beginning with first state in `First_US_Cases` (South Carolina). The remainder of this section will be proof of concept for the function created later.
 ```{r}
 state_connections <- US_connections %>% filter(State_Province.x=='South Carolina' | State_Province.y=='South Carolina')
 ```
-
-### Create list of candidate sources
 
 infectious_date is first day of state infection - minimum time before symptoms arise
 
@@ -67,12 +66,10 @@ candidate_sources <- world_outbreak_data %>%
 Add columns to identify the state for each source & that state's first outbreak
 
 ```{r}
-state_lat <- First_US_Cases %>% filter(level1_name=='South Carolina') %>% select(Latitude) %>% as.numeric()
-state_long <- First_US_Cases %>% filter(level1_name=='South Carolina') %>% select(Longitude) %>% as.numeric()
-candidate_sources <- candidate_sources %>% mutate(state='South Carolina', state_first_infection=(infectious_date+3), state_lat=state_lat, state_long=state_long)
+candidate_sources <- candidate_sources %>% mutate(state='South Carolina', state_first_infection=(infectious_date+3))
 ```
 
-## Create connection-finding function
+Create connection-finding function
 
 ```{r}
 connection_finder <- function(state) {
@@ -81,16 +78,12 @@ connection_finder <- function(state) {
   state_sources <- world_outbreak_data %>%
   filter((infectious_date %within% outbreak_dates) & (Outbreak_start_date < infectious_date)) %>%
     filter(iso_code %in% state_connections$ISO.3166.1.alpha.3.x | iso_code %in% state_connections$ISO.3166.1.alpha.3.y)
-  state_lat <- First_US_Cases %>% filter(level1_name==state) %>% select(Latitude) %>% as.numeric()
-  state_long <- First_US_Cases %>% filter(level1_name==state) %>% select(Longitude) %>% as.numeric()
-  state_sources <- state_sources %>% mutate(state=state, state_first_infection=(infectious_date+3), state_lat=state_lat, state_long=state_long)
+  state_sources <- state_sources %>% mutate(state=state, state_first_infection=(infectious_date+3))
   candidate_sources <<- rbind(candidate_sources, state_sources)
 }
 ```
 
-## Create list of potential sources for each state
-
-Use connection_finder function
+Create list of potential sources for each state using connection_finder function
 
 ```{r}
 for (level1_name in tail(First_US_Cases$level1_name, -1)) {
@@ -102,29 +95,24 @@ Select subset of meaningful variables
 
 ```{r}
 candidate_sources <- candidate_sources %>%
-  select(state, state_first_infection, state_lat, state_long, iso_code, country, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
+  select(state, state_first_infection,iso_code, country, country_unique_code, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Outbreak_id, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
 ```
 
-## Create subset of candidate source locations not inlcuing US
 
+# Analysis
+
+## Using candidate_sources
+
+Create new variable that excludes state data (one row per potential event) & US sources
 ```{r}
-outside_US_sources <- candidate_sources %>% filter(country!='United States of America')
+distinct_sources <-candidate_sources %>% filter(country_unique_code!='USA') %>% distinct(Outbreak_id, .keep_all = TRUE)
+sort(table(non_US_Sources$country))
 ```
-
-Number of potential source countries and how many potential source events they had
+Find most abundant source locations
 ```{r}
-n_distinct(outside_US_sources$country)
-sort(table(outside_US_sources$country))
+tail(sort(table(distinct_sources$level1_name)))
 ```
 
-Do the same for level1_names
-
-```{r}
-n_distinct(outside_US_sources$level1_name)
-tail(sort(table(outside_US_sources$level1_name)))
-```
-
-## Time between event and infection
 Average time between state first infection and potential source (per state)
 ```{r}
 candidate_sources %>% group_by(state) %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date))
@@ -147,18 +135,11 @@ Just Canada
 candidate_sources %>% filter(country=='Canada') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 
-### Source Summary Table
-```{r}
-source_summary <- candidate_sources %>% group_by(state, state_first_infection, country, level1_name) %>% count(level1_name)
-```
-
-
 ## Export Data
 
-### Write to documents
+Write to documents
 
 ```{r}
 write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
 write.csv(First_US_Cases,"US_First_Outbreaks.csv", row.names = FALSE)
-write.csv(source_summary, "Source_Summary.csv", row.names = FALSE)
 ```
