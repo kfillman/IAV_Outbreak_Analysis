@@ -100,11 +100,11 @@ for (level1_name in tail(First_US_Cases$level1_name, -1)) {
 }
 ```
 
-Select subset of meaningful variables
+Select subset of meaningful variables & limit time before infection to 1 month
 
 ```{r}
 candidate_sources <- candidate_sources %>%
-  select(state, state_first_infection,iso_code, country, country_unique_code, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Outbreak_id, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name)
+  select(state, state_first_infection,iso_code, country, country_unique_code, region, reporting_level, strain_eng, sero_sub_genotype_eng,  disease_eng, Outbreak_id, Latitude, Longitude, Outbreak_start_date, level3_name, level2_name, level1_name) %>% mutate(time_to_infection=(state_first_infection-Outbreak_start_date)) %>% filter(time_to_infection<=31)
 ```
 
 # Analysis
@@ -122,16 +122,6 @@ Find potential source countries & their number of distinct events
 
 ```{r}
 candidate_sources %>% filter(country_unique_code!='USA') %>% distinct(Outbreak_id, .keep_all = TRUE) %>% count(country) %>% arrange(desc(n))
-```
-
-POTENTIAL USE: limit time_to_infection
-
-```{r}
-candidate_sources %>% 
-  mutate(time_to_infection=(state_first_infection-Outbreak_start_date)) %>%
-  filter(time_to_infection<90) %>%
-  select(time_to_infection) %>%
-  summarise(mean=mean(time_to_infection))
 ```
 
 Average time between state first infection and potential source (per state).
@@ -159,53 +149,13 @@ candidate_sources %>% filter(country=='Canada') %>% summarise(time_to_infection=
 ```
 
 ### Average Warning Times Per Proposed Monitoring Locations
+! revisit later ! 
 
 Victoria, British Columbia, Canada
 
 ```{r}
 candidate_sources %>% filter(level3_name=='Victoria') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
-
-Edmonton, Alberta, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Edmonton') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Regina, Saskatchewan, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Winnipeg, Manitoba, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Winnipeg') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Toronto, Ontario, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Toronto') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Regina, Saskatchewan, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Regina, Saskatchewan, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
-```
-
-Regina, Saskatchewan, Canada
-
-```{r}
-candidate_sources %>% filter(level3_name=='Regina') %>% summarise(time_to_infection=mean(state_first_infection-Outbreak_start_date), min=min(state_first_infection-Outbreak_start_date), max=max(state_first_infection-Outbreak_start_date))
 ```
 
 ## Export Data
@@ -216,3 +166,4 @@ Write to documents
 write.csv(candidate_sources,"Candidate_Source_List.csv", row.names = FALSE)
 write.csv(First_US_Cases,"US_First_Outbreaks.csv", row.names = FALSE)
 ```
+
