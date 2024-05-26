@@ -2592,9 +2592,9 @@ US,US51,US,GH09,"Gulls, terns, and allies (Laridae)",5
 US,US53,US,GH09,"Gulls, terns, and allies (Laridae)",24
 CA,CA02,US,MQ,"Gulls, terns, and allies (Laridae)",1
 US,US53,US,MQ,"Gulls, terns, and allies (Laridae)",1
-CA,CA08,US,MX28,"Gulls, terns, and allies (Laridae)",1
-CA,CA11,US,MX28,"Gulls, terns, and allies (Laridae)",1
-US,US24,US,MX28,"Gulls, terns, and allies (Laridae)",1
+CA,CA08,MX,MX28,"Gulls, terns, and allies (Laridae)",1
+CA,CA11,MX,MX28,"Gulls, terns, and allies (Laridae)",1
+US,US24,MX,MX28,"Gulls, terns, and allies (Laridae)",1
 CA,CA08,US,RQ,"Gulls, terns, and allies (Laridae)",2
 US,US02,US,RS,"Ducks, geese, and swans (Anatidae)",3
 CA,CA01,US,US01,"Ducks, geese, and swans (Anatidae)",29
