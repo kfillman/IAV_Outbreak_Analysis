@@ -1,0 +1,103 @@
+"","country","level1_name","Latitude","Longitude","n"
+"1","Belgium","Belgian Exclusive Economic Zone",51.32287,3.14998,2
+"2","Belgium","Vlaanderen",51.0955606956522,4.55422947826087,23
+"3","Belgium","Wallonie",50.604793,5.544734,1
+"4","Canada","Alberta",52.2952236363636,-112.866554545455,55
+"5","Canada","British Columbia",49.8212121212121,-121.812727272727,33
+"6","Canada","Manitoba",50.1119230769231,-97.4796153846154,26
+"7","Canada","New Brunswick",46.105,-65.6833333333333,6
+"8","Canada","Newfoundland and Labrador",47.9196142857143,-54.4001142857143,7
+"9","Canada","Northwest Territories",62.47,-114.37,1
+"10","Canada","Nova Scotia",44.8097066666667,-63.2851133333333,15
+"11","Canada","Ontario",44.0090326923077,-79.1829826923077,52
+"12","Canada","Prince Edward Island",46.3043125,-63.076175,8
+"13","Canada","Québec",46.2029,-71.5553772727273,22
+"14","Canada","Saskatchewan",51.2703333333333,-105.879333333333,30
+"15","Canada","Yukon",60.5766666666667,-134.783333333333,3
+"16","Denmark","Hovedstaden",55.951845,12.387296,3
+"17","Denmark","Midtjylland",56.1819015,9.906703125,8
+"18","Denmark","Nordjylland",57.1583,10.1018,2
+"19","Denmark","Sjælland",55.3246696666667,11.6555568888889,9
+"20","Denmark","Syddanmark",55.3440057272727,9.47677809090909,11
+"21","Denmark","Veterinary Inspection Unit North",56.5033,8.8902,1
+"22","Faeroe Islands","Vågø",62.0711,-7.3117,1
+"23","France","Bretagne",48.2131648333333,-2.71573766666667,6
+"24","France","Centre-Val de Loire",47.3849105,1.5721075,2
+"25","France","Grand Est",48.255196,4.335166,1
+"26","France","Hauts-de-France",50.39416925,1.95163616666667,12
+"27","France","Normandie",49.3397081860465,-0.445506744186047,43
+"28","France","Nouvelle-Aquitaine",45.5865093076923,0.425077538461538,91
+"29","France","Occitanie",44.823847027027,1.66009243243243,37
+"30","France","Pays de la Loire",47.0857219683544,-0.987286848101266,158
+"31","Greenland","Greenlandic Exclusive Economic Zone",64.027,-52.9949,1
+"32","Ireland","Cork",51.944288,-7.907249,1
+"33","Ireland","Donegal",55.2803066666667,-7.25948,3
+"34","Ireland","Dublin",53.33976,-6.1973,1
+"35","Japan","Akita",39.45305,140.4754,2
+"36","Japan","Aomori",41.0832,141.2479,2
+"37","Japan","Chiba",35.6868,140.4412,2
+"38","Japan","Fukushima",37.585,140.4313,1
+"39","Japan","Hokkaido",43.5556675757576,143.657757575758,66
+"40","Japan","Iwate",40.1809541666667,141.746154166667,24
+"41","Japan","Kagoshima",32.1508,130.2761,2
+"42","Japan","Kanagawa",35.403,139.3149,1
+"43","Japan","Kyoto",35.0116,135.7681,1
+"44","Korea (Rep. of)","Chungcheongbuk-do",36.9373,127.4186,1
+"45","Korea (Rep. of)","Chungcheongnam-do",36.7729635,127.0510425,2
+"46","Korea (Rep. of)","Gangwon-do",38.2649915,127.2860265,2
+"47","Korea (Rep. of)","Gyeonggi-do",37.0864238,126.9514212,5
+"48","Korea (Rep. of)","Gyeongsangnam-do",35.2212235,128.87467,2
+"49","Korea (Rep. of)","Jeollabuk-do",35.8310575,126.934852333333,6
+"50","Korea (Rep. of)","Jeollanam-do",34.792559,126.603072,1
+"51","Mexico","Jalisco",20.9544222571429,-102.635875857143,7
+"52","Mexico","Michoacán",19.759769,-101.188721,1
+"53","Mexico","México",19.1963,-99.557,1
+"54","Mexico","Oaxaca",15.8632,-95.9463,1
+"55","Mexico","Puebla",19.00775,-98.18755,2
+"56","Mexico","Sonora",27.4604,-110.118,1
+"57","Mexico","Tamaulipas",22.4863,-98.0436,1
+"58","Mexico","Yucatán",20.8597695,-89.8304604166667,12
+"59","Netherlands","Dutch Exclusive Economic Zone",51.964,4.008,1
+"60","Netherlands","Flevoland",52.4257571428571,5.3885,14
+"61","Netherlands","Friesland",53.2077458333333,5.94320833333333,12
+"62","Netherlands","Gelderland",52.1388201960784,5.79243647058824,51
+"63","Netherlands","Groningen",53.30841,6.802825,2
+"64","Netherlands","Limburg",51.152,5.9075,4
+"65","Netherlands","Noord-Brabant",51.6511727272727,4.72,11
+"66","Netherlands","Noord-Holland",52.5029299666667,5.04557663333333,30
+"67","Netherlands","Overijssel",52.3575,6.4325,4
+"68","Netherlands","Utrecht",52.1031785714286,5.19272142857143,14
+"69","Netherlands","Zeeland",51.4809,4.0467,1
+"70","Netherlands","Zuid-Holland",51.912545,4.3550925,40
+"71","Norway","Oslo",59.8879,10.75459,1
+"72","Norway","Rogaland",59.12971,5.36590333333333,3
+"73","Norway","Svalbard and Jan Mayen",78.54086,12.21542,1
+"74","Norway","Troms Og Finnmark",70.016305,29.70154,2
+"75","Norway","Trøndelag",64.32656,10.203555,2
+"76","Norway","Vestland",60.5996425,5.0688175,4
+"77","Norway","Viken",59.378885,10.85748,2
+"78","Portugal","Beja",37.85304425,-7.810591,4
+"79","Portugal","Leiria",39.375661,-9.245339,2
+"80","Portugal","Lisboa",39.1358736,-9.296013,5
+"81","Portugal","Santarém",39.2948426,-8.4783614,5
+"82","Portugal","Setúbal",38.0540705,-8.738317,2
+"83","Portugal","Évora",38.65243,-8.482766,1
+"84","Russia","Astrakhan'",46.178267,49.216067,1
+"85","Russia","Khabarovsk",50.6535,136.9545,1
+"86","Russia","Kursk",51.841659,35.146208,1
+"87","Russia","Moscow City",55.724365,37.595231,1
+"88","Russia","Russian Exclusive economic Zone",45.04886,48.3101,1
+"89","Russia","Ryazan'",53.589137,39.6624288,5
+"90","Russia","Saratov",50.912235,48.766024,1
+"91","Russia","Stavropol'",45.296399,41.5121475,4
+"92","Spain","Andalucía",37.345355,-5.979285,20
+"93","Spain","Castilla y León",41.0968,-4.62714,12
+"94","Spain","Cataluña",41.92125,1.85075,2
+"95","Spain","Comunidad de Madrid",40.7677,-3.6855,1
+"96","Spain","Extremadura",39.0321,-5.9813,1
+"97","United Kingdom","England",52.4742528735632,-1.50931034482759,87
+"98","United Kingdom","Isle of Man",54.2733333333333,-4.54333333333333,3
+"99","United Kingdom","Northern Ireland",54.6267,-7.16086666666667,3
+"100","United Kingdom","Scotland",57.1693396226415,-3.37962264150943,53
+"101","United Kingdom","United Kingdom Exclusive Economic Zone",50.75,-0.75,1
+"102","United Kingdom","Wales",52.4333333333333,-3.475,6
