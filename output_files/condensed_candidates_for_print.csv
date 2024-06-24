@@ -20,11 +20,11 @@
 19,Alaska,4/26/2022,Canada,New Brunswick,4
 20,Alaska,4/26/2022,Canada,Newfoundland and Labrador,7
 21,Alaska,4/26/2022,Canada,Ontario,67
-22,Alaska,4/26/2022,Canada,Québec,95
+22,Alaska,4/26/2022,Canada,QuÃ©bec,95
 23,Alaska,4/26/2022,Canada,Saskatchewan,80
 24,Alaska,4/26/2022,Denmark,Hovedstaden,1
 25,Alaska,4/26/2022,Denmark,Midtjylland,1
-26,Alaska,4/26/2022,Denmark,Sjælland,3
+26,Alaska,4/26/2022,Denmark,SjÃ¦lland,3
 27,Alaska,4/26/2022,Denmark,Syddanmark,3
 28,Alaska,4/26/2022,Denmark,Veterinary Inspection Unit North,1
 29,Alaska,4/26/2022,Greenland,Greenlandic Exclusive Economic Zone,1
@@ -65,7 +65,7 @@
 64,Arizona,6/7/2022,Canada,Nova Scotia,2
 65,Arizona,6/7/2022,Canada,Ontario,7
 66,Arizona,6/7/2022,Canada,Prince Edward Island,18
-67,Arizona,6/7/2022,Canada,Québec,12
+67,Arizona,6/7/2022,Canada,QuÃ©bec,12
 68,Arizona,6/7/2022,Canada,Saskatchewan,9
 69,Arizona,6/7/2022,Canada,Yukon,1
 70,Arizona,6/7/2022,Russia,Russian Exclusive economic Zone,7
@@ -95,7 +95,7 @@
 94,Arkansas,10/6/2022,Canada,British Columbia,5
 95,Arkansas,10/6/2022,Canada,Manitoba,16
 96,Arkansas,10/6/2022,Canada,Ontario,22
-97,Arkansas,10/6/2022,Canada,Québec,1
+97,Arkansas,10/6/2022,Canada,QuÃ©bec,1
 98,Arkansas,10/6/2022,Canada,Saskatchewan,12
 99,Arkansas,10/6/2022,Russia,Saratov,1
 100,Arkansas,10/6/2022,United States of America,Alaska,2
@@ -137,7 +137,7 @@
 136,California,7/14/2022,Canada,Nova Scotia,6
 137,California,7/14/2022,Canada,Ontario,21
 138,California,7/14/2022,Canada,Prince Edward Island,4
-139,California,7/14/2022,Canada,Québec,30
+139,California,7/14/2022,Canada,QuÃ©bec,30
 140,California,7/14/2022,Canada,Saskatchewan,13
 141,California,7/14/2022,France,Bretagne,2
 142,California,7/14/2022,France,Hauts-de-France,13
@@ -146,7 +146,7 @@
 145,California,7/14/2022,Norway,Rogaland,3
 146,California,7/14/2022,Norway,Svalbard and Jan Mayen,1
 147,California,7/14/2022,Norway,Troms Og Finnmark,2
-148,California,7/14/2022,Norway,Trøndelag,2
+148,California,7/14/2022,Norway,TrÃ¸ndelag,2
 149,California,7/14/2022,Norway,Vestland,4
 150,California,7/14/2022,Norway,Viken,2
 151,California,7/14/2022,United Kingdom,England,24
@@ -168,7 +168,7 @@
 167,Colorado,3/24/2022,Canada,Nova Scotia,27
 168,Colorado,3/24/2022,Canada,Ontario,19
 169,Colorado,3/24/2022,Canada,Prince Edward Island,11
-170,Colorado,3/24/2022,Canada,Québec,10
+170,Colorado,3/24/2022,Canada,QuÃ©bec,10
 171,Colorado,3/24/2022,Japan,Hokkaido,9
 172,Colorado,3/24/2022,Japan,Iwate,12
 173,Colorado,3/24/2022,Russia,Astrakhan',1
@@ -218,7 +218,7 @@
 217,Delaware,2/9/2022,Denmark,Hovedstaden,2
 218,Delaware,2/9/2022,Denmark,Midtjylland,7
 219,Delaware,2/9/2022,Denmark,Nordjylland,2
-220,Delaware,2/9/2022,Denmark,Sjælland,7
+220,Delaware,2/9/2022,Denmark,SjÃ¦lland,7
 221,Delaware,2/9/2022,Denmark,Syddanmark,8
 222,Delaware,2/9/2022,Japan,Chiba,2
 223,Delaware,2/9/2022,Japan,Hokkaido,7
@@ -238,8 +238,8 @@
 237,Delaware,2/9/2022,Netherlands,Zuid-Holland,24
 238,Delaware,2/9/2022,Portugal,Leiria,1
 239,Delaware,2/9/2022,Portugal,Lisboa,2
-240,Delaware,2/9/2022,Portugal,Santarém,3
-241,Delaware,2/9/2022,Portugal,Setúbal,1
+240,Delaware,2/9/2022,Portugal,SantarÃ©m,3
+241,Delaware,2/9/2022,Portugal,SetÃºbal,1
 242,Delaware,2/9/2022,Russia,Moscow City,2
 243,Delaware,2/9/2022,Russia,Stavropol',8
 244,Delaware,2/9/2022,United Kingdom,England,84
@@ -257,7 +257,7 @@
 256,District of Columbia,6/3/2022,Canada,Nova Scotia,2
 257,District of Columbia,6/3/2022,Canada,Ontario,57
 258,District of Columbia,6/3/2022,Canada,Prince Edward Island,18
-259,District of Columbia,6/3/2022,Canada,Québec,15
+259,District of Columbia,6/3/2022,Canada,QuÃ©bec,15
 260,District of Columbia,6/3/2022,Canada,Saskatchewan,13
 261,District of Columbia,6/3/2022,Canada,Yukon,1
 262,District of Columbia,6/3/2022,United States of America,Alaska,2
@@ -285,7 +285,7 @@
 284,Florida,2/17/2022,Canada,Newfoundland and Labrador,2
 285,Florida,2/17/2022,Canada,Nova Scotia,39
 286,Florida,2/17/2022,Canada,Prince Edward Island,15
-287,Florida,2/17/2022,Faeroe Islands,Vågø,1
+287,Florida,2/17/2022,Faeroe Islands,VÃ¥gÃ¸,1
 288,Florida,2/17/2022,United States of America,Delaware,1
 289,Florida,2/17/2022,United States of America,Indiana,3
 290,Florida,2/17/2022,United States of America,Kentucky,4
@@ -302,7 +302,7 @@
 301,Georgia,5/26/2022,Canada,Nova Scotia,2
 302,Georgia,5/26/2022,Canada,Ontario,71
 303,Georgia,5/26/2022,Canada,Prince Edward Island,4
-304,Georgia,5/26/2022,Canada,Québec,12
+304,Georgia,5/26/2022,Canada,QuÃ©bec,12
 305,Georgia,5/26/2022,Canada,Saskatchewan,21
 306,Georgia,5/26/2022,Canada,Yukon,8
 307,Georgia,5/26/2022,United States of America,Alaska,5
@@ -333,7 +333,7 @@
 332,Idaho,4/1/2022,Canada,Nova Scotia,29
 333,Idaho,4/1/2022,Canada,Ontario,33
 334,Idaho,4/1/2022,Canada,Prince Edward Island,2
-335,Idaho,4/1/2022,Canada,Québec,16
+335,Idaho,4/1/2022,Canada,QuÃ©bec,16
 336,Idaho,4/1/2022,Canada,Saskatchewan,55
 337,Idaho,4/1/2022,Russia,Astrakhan',1
 338,Idaho,4/1/2022,United States of America,Colorado,1
@@ -441,9 +441,9 @@
 440,Louisiana,10/13/2022,Canada,British Columbia,6
 441,Louisiana,10/13/2022,Canada,Manitoba,22
 442,Louisiana,10/13/2022,Canada,Ontario,25
-443,Louisiana,10/13/2022,Canada,Québec,1
+443,Louisiana,10/13/2022,Canada,QuÃ©bec,1
 444,Louisiana,10/13/2022,Canada,Saskatchewan,14
-445,Louisiana,10/13/2022,Mexico,México,1
+445,Louisiana,10/13/2022,Mexico,MÃ©xico,1
 446,Louisiana,10/13/2022,United States of America,Alaska,3
 447,Louisiana,10/13/2022,United States of America,Arkansas,2
 448,Louisiana,10/13/2022,United States of America,California,8
@@ -482,7 +482,7 @@
 481,Maine,2/14/2022,Canada,Nova Scotia,39
 482,Maine,2/14/2022,Canada,Prince Edward Island,15
 483,Maine,2/14/2022,Portugal,Lisboa,6
-484,Maine,2/14/2022,Portugal,Setúbal,1
+484,Maine,2/14/2022,Portugal,SetÃºbal,1
 485,Maine,2/14/2022,United States of America,Delaware,1
 486,Maine,2/14/2022,United States of America,Indiana,3
 487,Maine,2/14/2022,United States of America,Kentucky,4
@@ -518,9 +518,9 @@
 517,Michigan,2/22/2022,Canada,New Brunswick,18
 518,Michigan,2/22/2022,Canada,Nova Scotia,39
 519,Michigan,2/22/2022,Canada,Prince Edward Island,15
-520,Michigan,2/22/2022,Spain,Andalucía,43
-521,Michigan,2/22/2022,Spain,Castilla y León,18
-522,Michigan,2/22/2022,Spain,Cataluña,1
+520,Michigan,2/22/2022,Spain,AndalucÃ­a,43
+521,Michigan,2/22/2022,Spain,Castilla y LeÃ³n,18
+522,Michigan,2/22/2022,Spain,CataluÃ±a,1
 523,Michigan,2/22/2022,Spain,Comunidad de Madrid,3
 524,Michigan,2/22/2022,Spain,Extremadura,1
 525,Michigan,2/22/2022,United States of America,Connecticut,1
@@ -539,7 +539,7 @@
 538,Minnesota,3/25/2022,Canada,Nova Scotia,29
 539,Minnesota,3/25/2022,Canada,Ontario,19
 540,Minnesota,3/25/2022,Canada,Prince Edward Island,11
-541,Minnesota,3/25/2022,Canada,Québec,10
+541,Minnesota,3/25/2022,Canada,QuÃ©bec,10
 542,Minnesota,3/25/2022,Japan,Hokkaido,9
 543,Minnesota,3/25/2022,Japan,Iwate,10
 544,Minnesota,3/25/2022,United States of America,Alabama,1
@@ -568,10 +568,10 @@
 567,Mississippi,9/10/2022,Canada,Alberta,4
 568,Mississippi,9/10/2022,Canada,British Columbia,4
 569,Mississippi,9/10/2022,Canada,Manitoba,2
-570,Mississippi,9/10/2022,Canada,Québec,2
+570,Mississippi,9/10/2022,Canada,QuÃ©bec,2
 571,Mississippi,9/10/2022,Portugal,Beja,3
-572,Mississippi,9/10/2022,Portugal,Santarém,1
-573,Mississippi,9/10/2022,Portugal,Évora,1
+572,Mississippi,9/10/2022,Portugal,SantarÃ©m,1
+573,Mississippi,9/10/2022,Portugal,Ã‰vora,1
 574,Mississippi,9/10/2022,United States of America,California,18
 575,Mississippi,9/10/2022,United States of America,Florida,1
 576,Mississippi,9/10/2022,United States of America,Georgia,1
@@ -610,7 +610,7 @@
 609,Montana,3/29/2022,Canada,Nova Scotia,29
 610,Montana,3/29/2022,Canada,Ontario,33
 611,Montana,3/29/2022,Canada,Prince Edward Island,2
-612,Montana,3/29/2022,Canada,Québec,16
+612,Montana,3/29/2022,Canada,QuÃ©bec,16
 613,Montana,3/29/2022,Russia,Astrakhan',1
 614,Montana,3/29/2022,United States of America,Colorado,1
 615,Montana,3/29/2022,United States of America,Delaware,4
@@ -663,7 +663,7 @@
 662,Nevada,6/28/2022,Canada,Manitoba,2
 663,Nevada,6/28/2022,Canada,Northwest Territories,1
 664,Nevada,6/28/2022,Canada,Prince Edward Island,14
-665,Nevada,6/28/2022,Canada,Québec,9
+665,Nevada,6/28/2022,Canada,QuÃ©bec,9
 666,Nevada,6/28/2022,Russia,Kursk,2
 667,Nevada,6/28/2022,Russia,Ryazan',9
 668,Nevada,6/28/2022,United States of America,Alaska,7
@@ -765,23 +765,23 @@
 764,New York,2/7/2022,Ireland,Cork,1
 765,New York,2/7/2022,Ireland,Donegal,3
 766,New York,2/7/2022,Ireland,Dublin,1
-767,New York,2/7/2022,Spain,Andalucía,11
-768,New York,2/7/2022,Spain,Castilla y León,20
-769,New York,2/7/2022,Spain,Cataluña,3
+767,New York,2/7/2022,Spain,AndalucÃ­a,11
+768,New York,2/7/2022,Spain,Castilla y LeÃ³n,20
+769,New York,2/7/2022,Spain,CataluÃ±a,3
 770,New York,2/7/2022,United States of America,Maryland,1
 771,New York,2/7/2022,United States of America,North Carolina,6
 772,New York,2/7/2022,United States of America,Virginia,1
 773,North Carolina,1/20/2022,Canada,Newfoundland and Labrador,2
 774,North Carolina,1/20/2022,Canada,Nova Scotia,8
 775,North Carolina,1/20/2022,Portugal,Leiria,3
-776,North Carolina,1/20/2022,Portugal,Santarém,6
-777,North Carolina,1/20/2022,Portugal,Setúbal,2
+776,North Carolina,1/20/2022,Portugal,SantarÃ©m,6
+777,North Carolina,1/20/2022,Portugal,SetÃºbal,2
 778,North Carolina,1/20/2022,United States of America,South Carolina,2
 779,North Dakota,3/27/2022,Canada,New Brunswick,35
 780,North Dakota,3/27/2022,Canada,Nova Scotia,29
 781,North Dakota,3/27/2022,Canada,Ontario,19
 782,North Dakota,3/27/2022,Canada,Prince Edward Island,2
-783,North Dakota,3/27/2022,Canada,Québec,10
+783,North Dakota,3/27/2022,Canada,QuÃ©bec,10
 784,North Dakota,3/27/2022,United States of America,Delaware,4
 785,North Dakota,3/27/2022,United States of America,Florida,7
 786,North Dakota,3/27/2022,United States of America,Illinois,3
@@ -827,7 +827,7 @@
 826,Oklahoma,4/28/2022,Canada,New Brunswick,4
 827,Oklahoma,4/28/2022,Canada,Newfoundland and Labrador,7
 828,Oklahoma,4/28/2022,Canada,Ontario,71
-829,Oklahoma,4/28/2022,Canada,Québec,95
+829,Oklahoma,4/28/2022,Canada,QuÃ©bec,95
 830,Oklahoma,4/28/2022,Canada,Saskatchewan,86
 831,Oklahoma,4/28/2022,Russia,Khabarovsk,1
 832,Oklahoma,4/28/2022,United States of America,Colorado,6
@@ -858,7 +858,7 @@
 857,Oregon,4/29/2022,Canada,New Brunswick,4
 858,Oregon,4/29/2022,Canada,Newfoundland and Labrador,7
 859,Oregon,4/29/2022,Canada,Ontario,74
-860,Oregon,4/29/2022,Canada,Québec,95
+860,Oregon,4/29/2022,Canada,QuÃ©bec,95
 861,Oregon,4/29/2022,Canada,Saskatchewan,33
 862,Oregon,4/29/2022,Japan,Akita,3
 863,Oregon,4/29/2022,Japan,Aomori,2
@@ -892,7 +892,7 @@
 891,Pennsylvania,3/24/2022,Canada,Nova Scotia,27
 892,Pennsylvania,3/24/2022,Canada,Ontario,19
 893,Pennsylvania,3/24/2022,Canada,Prince Edward Island,11
-894,Pennsylvania,3/24/2022,Canada,Québec,10
+894,Pennsylvania,3/24/2022,Canada,QuÃ©bec,10
 895,Pennsylvania,3/24/2022,United States of America,Alabama,1
 896,Pennsylvania,3/24/2022,United States of America,Connecticut,4
 897,Pennsylvania,3/24/2022,United States of America,Delaware,4
@@ -925,7 +925,7 @@
 924,Rhode Island,7/6/2022,Canada,Nova Scotia,5
 925,Rhode Island,7/6/2022,Canada,Ontario,21
 926,Rhode Island,7/6/2022,Canada,Prince Edward Island,4
-927,Rhode Island,7/6/2022,Canada,Québec,29
+927,Rhode Island,7/6/2022,Canada,QuÃ©bec,29
 928,Rhode Island,7/6/2022,Canada,Saskatchewan,13
 929,Rhode Island,7/6/2022,United States of America,Alaska,8
 930,Rhode Island,7/6/2022,United States of America,Arizona,1
@@ -1013,7 +1013,7 @@
 1012,Utah,4/11/2022,Canada,Nova Scotia,27
 1013,Utah,4/11/2022,Canada,Ontario,60
 1014,Utah,4/11/2022,Canada,Prince Edward Island,2
-1015,Utah,4/11/2022,Canada,Québec,89
+1015,Utah,4/11/2022,Canada,QuÃ©bec,89
 1016,Utah,4/11/2022,Canada,Saskatchewan,59
 1017,Utah,4/11/2022,Russia,Astrakhan',1
 1018,Utah,4/11/2022,United States of America,Colorado,3
@@ -1047,7 +1047,7 @@
 1046,Vermont,4/7/2022,Canada,Nova Scotia,29
 1047,Vermont,4/7/2022,Canada,Ontario,60
 1048,Vermont,4/7/2022,Canada,Prince Edward Island,2
-1049,Vermont,4/7/2022,Canada,Québec,18
+1049,Vermont,4/7/2022,Canada,QuÃ©bec,18
 1050,Vermont,4/7/2022,Canada,Saskatchewan,59
 1051,Vermont,4/7/2022,United States of America,Colorado,3
 1052,Vermont,4/7/2022,United States of America,Delaware,4
@@ -1092,7 +1092,7 @@
 1091,Washington,4/25/2022,Canada,New Brunswick,4
 1092,Washington,4/25/2022,Canada,Newfoundland and Labrador,9
 1093,Washington,4/25/2022,Canada,Ontario,77
-1094,Washington,4/25/2022,Canada,Québec,101
+1094,Washington,4/25/2022,Canada,QuÃ©bec,101
 1095,Washington,4/25/2022,Canada,Saskatchewan,80
 1096,Washington,4/25/2022,France,Bretagne,4
 1097,Washington,4/25/2022,France,Centre-Val de Loire,2
@@ -1130,14 +1130,14 @@
 1129,West Virginia,12/16/2022,Canada,Alberta,1
 1130,West Virginia,12/16/2022,Canada,Ontario,5
 1131,West Virginia,12/16/2022,Canada,Prince Edward Island,2
-1132,West Virginia,12/16/2022,Canada,Québec,1
+1132,West Virginia,12/16/2022,Canada,QuÃ©bec,1
 1133,West Virginia,12/16/2022,Mexico,Jalisco,13
-1134,West Virginia,12/16/2022,Mexico,Michoacán,1
+1134,West Virginia,12/16/2022,Mexico,MichoacÃ¡n,1
 1135,West Virginia,12/16/2022,Mexico,Oaxaca,2
 1136,West Virginia,12/16/2022,Mexico,Puebla,2
 1137,West Virginia,12/16/2022,Mexico,Sonora,1
 1138,West Virginia,12/16/2022,Mexico,Tamaulipas,3
-1139,West Virginia,12/16/2022,Mexico,Yucatán,21
+1139,West Virginia,12/16/2022,Mexico,YucatÃ¡n,21
 1140,West Virginia,12/16/2022,United States of America,Alabama,3
 1141,West Virginia,12/16/2022,United States of America,Alaska,4
 1142,West Virginia,12/16/2022,United States of America,Arkansas,2
@@ -1193,7 +1193,7 @@
 1192,Wyoming,3/25/2022,Canada,Nova Scotia,29
 1193,Wyoming,3/25/2022,Canada,Ontario,19
 1194,Wyoming,3/25/2022,Canada,Prince Edward Island,11
-1195,Wyoming,3/25/2022,Canada,Québec,10
+1195,Wyoming,3/25/2022,Canada,QuÃ©bec,10
 1196,Wyoming,3/25/2022,Russia,Astrakhan',1
 1197,Wyoming,3/25/2022,United States of America,Alabama,1
 1198,Wyoming,3/25/2022,United States of America,Connecticut,4
