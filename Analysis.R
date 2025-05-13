@@ -13,7 +13,7 @@ library(factoextra)
 banding <- read.csv("Outbreak_data/Banding_recov_.csv")
 FIPS_codes <- read.csv("Outbreak_data/FIPS_Region_Codes.csv")
 world_outbreak_data <- read_excel("Outbreak_data/Outbreak_H5_H5N1_2020_Sept2023_World.xlsx", sheet = "outbreaks")
-shapefile <- read_sf("C:/Users/Kath/Documents/IAV_Outbreak_Analysis/Outbreak_data/admin_unit/Admin_unit.shp")
+shapefile <- read_sf("Outbreak_data/Admin_unit.shp")
 
 
 # Data Cleaning ----
